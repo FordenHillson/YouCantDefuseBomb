@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: c4011279030db0b4686f592d3179a128
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - yellowWire: {fileID: 5016462867591616331, guid: e3669f1218bacfe43a8fb2ee8e37a316, type: 3}
+  - blueWire: {fileID: 2034443812839996503, guid: aa3669bd1058688409259eaa9e4b2b8f, type: 3}
+  - redWire: {fileID: 8569283090341030855, guid: 81ef21db3fb380548b0e6ced83f071bd, type: 3}
+  - yWire: {fileID: 9111399725553006455, guid: 0525b63c838872547bc62db7304f1eb2, type: 3}
+  - bWire: {fileID: 6773700454715983013, guid: 2dc4876fa48849a43a638ee9f5526903, type: 3}
+  - rWire: {fileID: 4003945707118974083, guid: 3182bc3fa9daef14a8dfa5af99f7d9c4, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
