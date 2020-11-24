@@ -7,6 +7,7 @@ public class RandomSceneIngame : MonoBehaviour
 {
    public GameObject numberScene;
    public RandomValueWire valueWire;
+   public CountScene countScene;
     int numScene;
     // Start is called before the first frame update
     void Start()
@@ -15,14 +16,18 @@ public class RandomSceneIngame : MonoBehaviour
         numberScene.GetComponent<RandomController>();
 
         valueWire = GameObject.Find("Wire").GetComponent<RandomValueWire>();
+        countScene = GameObject.Find("CountScene").GetComponent<CountScene>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+
         if(valueWire.numNext == 1)
         {
             rndScene();
+            
         }
     }
 
@@ -30,5 +35,6 @@ public class RandomSceneIngame : MonoBehaviour
     {
         numScene = RandomController.ResultRndNumScene;
         SceneManager.LoadScene(numScene);
+        countScene.valueCountScene ++;
     }
 }
