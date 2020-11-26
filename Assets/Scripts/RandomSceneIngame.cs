@@ -8,6 +8,7 @@ public class RandomSceneIngame : MonoBehaviour
    public GameObject numberScene;
    public RandomValueWire valueWire;
    public CountScene countScene;
+   
     int numScene;
     // Start is called before the first frame update
     void Start()
