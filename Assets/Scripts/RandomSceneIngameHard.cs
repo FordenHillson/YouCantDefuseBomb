@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class RandomSceneIngame : MonoBehaviour
+public class RandomSceneIngameHard : MonoBehaviour
 {
-   public GameObject numberScene;
-   public RandomValueWire valueWire;
-   //public RandomValueWireHard valueWireHard;
+  public GameObject numberScene;
+   
+   public RandomValueWireHard valueWireHard;
    public CountScene countScene;
    
    public bool isWire1 = false;
-   //public bool isWire2 = false;
+   public bool isWire2 = false;
    
     int numScene;
     // Start is called before the first frame update
@@ -20,8 +20,8 @@ public class RandomSceneIngame : MonoBehaviour
         numberScene = GameObject.Find("Randomnumber_OBJ");
         numberScene.GetComponent<RandomController>();
 
-        valueWire = GameObject.Find("Wire").GetComponent<RandomValueWire>();
-        //valueWireHard = GameObject.Find("Wire").GetComponent<RandomValueWireHard>();
+        
+        valueWireHard = GameObject.Find("Wire").GetComponent<RandomValueWireHard>();
         countScene = GameObject.Find("CountScene").GetComponent<CountScene>();
     }
 
@@ -29,7 +29,7 @@ public class RandomSceneIngame : MonoBehaviour
     void Update()
     {
         
-        if(isWire1 /*&& isWire2*/)
+        if(isWire1 && isWire2)
         {
             rndScene();
         }
