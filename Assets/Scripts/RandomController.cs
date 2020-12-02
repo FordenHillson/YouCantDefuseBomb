@@ -15,19 +15,7 @@ public class RandomController : MonoBehaviour
     {
         countScene = GameObject.Find("CountScene").GetComponent<CountScene>();
 
-        if(countScene.valueCountScene <= 5)
-        {
-            numberRND = Random.Range(1,3);
-        }else if(countScene.valueCountScene > 5 && countScene.valueCountScene <= 10)
-        {
-           numberRND = Random.Range(4,6); 
-        }else if(countScene.valueCountScene > 10)
-        {
-            numberRND = Random.Range(7,9);
-        }
-
-        
-        Debug.Log("Next Scene is : "+numberRND);
+        randomSceneController();
         numberRandom();
     }
 
@@ -41,5 +29,22 @@ public class RandomController : MonoBehaviour
     {
         ResultRndNumScene = numberRND;
         Debug.Log(ResultRndNumScene);
+    }
+
+    void randomSceneController()
+    {
+        if(countScene.valueCountScene <= 5)
+        {
+            numberRND = Random.Range(1,3);
+        }else if(countScene.valueCountScene > 5 && countScene.valueCountScene <= 10)
+        {
+           numberRND = Random.Range(4,6); 
+        }else if(countScene.valueCountScene > 10)
+        {
+            numberRND = Random.Range(7,9);
+        }
+
+        
+        Debug.Log("Next Scene is : "+numberRND);
     }
 }
