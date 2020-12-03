@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class ButtonController : MonoBehaviour
 {
+    [Header("ButtonScripts : ")]
     public BlueButton blueButton;
     public GreenButton greenButton;
     public OrangeButton orangeButton;
-
+    
+    [Header("result : ")]
     public int resultButton;
-    public int sizeArray;
 
+    [Header("Check : ")]
+    public int score = 0;
+
+    [Header("Array : ")]
+    public int sizeArray;
     public GameObject[] ButtonArray;
 
 
@@ -29,7 +35,8 @@ public class ButtonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        checkResult();
+        checkResult(); 
+             
     }
 
     void randomController()
@@ -45,12 +52,15 @@ public class ButtonController : MonoBehaviour
         {
             if(blueButton.blueValue == resultButton)
             {
-                Debug.Log("Boom");
+                Debug.Log("Boom");                                            
             }
             else
             {
                 Debug.Log("Ok");
-            }
+                score ++;
+                blueButton.isBlue = false;
+                                               
+            }            
         }
 
         if(greenButton.isGreen)
@@ -58,10 +68,13 @@ public class ButtonController : MonoBehaviour
             if(greenButton.greenValue == resultButton)
             {
                 Debug.Log("Boom");
+                
             }
             else
             {
                 Debug.Log("Ok");
+                score ++;
+                greenButton.isGreen = false;
             }
         }
 
@@ -70,12 +83,17 @@ public class ButtonController : MonoBehaviour
             if(orangeButton.orangeValue == resultButton)
             {
                 Debug.Log("Boom");
+                
             }
             else
             {
                 Debug.Log("Ok");
+                score++;
+                orangeButton.isOrange = false;
             }
-        }
+        }    
+        
+             
     } 
     
 }

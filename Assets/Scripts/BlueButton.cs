@@ -8,11 +8,14 @@ public class BlueButton : MonoBehaviour
     private Sprite blueClickSprite;
     public int blueValue = 1;
     public bool isBlue = false;
+
+    
     // Start is called before the first frame update
     void Start()
     {
         spriteBlue = GetComponent<SpriteRenderer>();
         blueClickSprite = Resources.Load<Sprite>("Blue_Button_isClick");
+        
     }
 
     // Update is called once per frame
@@ -29,7 +32,9 @@ public class BlueButton : MonoBehaviour
                 isBlue = true;
                 spriteBlue.sprite = blueClickSprite;            
             }
-
         }
+
+           
+
     }
 }
