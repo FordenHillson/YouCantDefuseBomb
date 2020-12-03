@@ -688,7 +688,7 @@ PrefabInstance:
     - target: {fileID: 9040093058308520361, guid: f971cdb1c89773d4aaa79e898ac26fed, type: 3}
       propertyPath: randomSceneIngame
       value: 
-      objectReference: {fileID: 1154622346700109544}
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 979713132, guid: f971cdb1c89773d4aaa79e898ac26fed, type: 3}
     - {fileID: 530730314, guid: f971cdb1c89773d4aaa79e898ac26fed, type: 3}
@@ -910,16 +910,28 @@ PrefabInstance:
       propertyPath: m_Name
       value: RndScene
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1154622347793809865, guid: a1b7ddbdf00f63947a1bbc281350a20b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a1b7ddbdf00f63947a1bbc281350a20b, type: 3}
---- !u!114 &1154622346700109544 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1154622347793809865, guid: a1b7ddbdf00f63947a1bbc281350a20b, type: 3}
+--- !u!1 &1154622346700109544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1154622347793809866, guid: a1b7ddbdf00f63947a1bbc281350a20b, type: 3}
   m_PrefabInstance: {fileID: 1154622346700109543}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+--- !u!114 &1154622346700109545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154622346700109544}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5ee9150f750d2a48936ac1fcd4d1284, type: 3}
+  m_Script: {fileID: 11500000, guid: ea11fd8401c2c3e4bba3b6d5d80c2aca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numberScene: {fileID: 1715100868}
+  countScene: {fileID: 0}
+  valueWire: {fileID: 736538231}
+  isWire1: 0
+  button: {fileID: 0}

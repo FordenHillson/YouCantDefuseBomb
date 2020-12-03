@@ -276,7 +276,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &606698800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -546,8 +546,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: RndScene
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1154622347793809865, guid: a1b7ddbdf00f63947a1bbc281350a20b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a1b7ddbdf00f63947a1bbc281350a20b, type: 3}
+--- !u!1 &715223672 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1154622347793809866, guid: a1b7ddbdf00f63947a1bbc281350a20b, type: 3}
+  m_PrefabInstance: {fileID: 715223671}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &715223673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715223672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea11fd8401c2c3e4bba3b6d5d80c2aca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valueWire: {fileID: 0}
+  isWire1: 0
+  button: {fileID: 94534941}
 --- !u!224 &1170459240 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6486152733624281067, guid: 9dc21d005bde9ab409a45587d96bf5ee, type: 3}

@@ -31,7 +31,7 @@ public class RandomController : MonoBehaviour
         Debug.Log(ResultRndNumScene);
     }
 
-    void randomSceneController()
+    public void randomSceneController()
     {
         if(countScene.valueCountScene <= 5)
         {

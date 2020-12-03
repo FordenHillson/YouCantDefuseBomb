@@ -14,6 +14,7 @@ public class ButtonController : MonoBehaviour
 
     [Header("Check : ")]
     public int score = 0;
+    
 
     [Header("Array : ")]
     public int sizeArray;

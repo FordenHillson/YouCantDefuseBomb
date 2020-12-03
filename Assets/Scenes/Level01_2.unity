@@ -509,5 +509,28 @@ PrefabInstance:
       propertyPath: m_Name
       value: RndScene
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1154622347793809865, guid: a1b7ddbdf00f63947a1bbc281350a20b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a1b7ddbdf00f63947a1bbc281350a20b, type: 3}
+--- !u!1 &2045860090 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1154622347793809866, guid: a1b7ddbdf00f63947a1bbc281350a20b, type: 3}
+  m_PrefabInstance: {fileID: 2045860089}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2045860091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045860090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea11fd8401c2c3e4bba3b6d5d80c2aca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberScene: {fileID: 1871895978}
+  countScene: {fileID: 0}
+  valueWire: {fileID: 1265413697}
+  isWire1: 0
+  button: {fileID: 0}
