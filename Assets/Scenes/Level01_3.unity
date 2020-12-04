@@ -578,7 +578,7 @@ MonoBehaviour:
   redWire: {fileID: 983303713}
   whiteWire: {fileID: 382707599}
   countScene: {fileID: 0}
-  randomSceneIngameHard: {fileID: 0}
+  randomSceneIngameHard: {fileID: 2096526806}
 --- !u!1 &2096526805 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1154622347793809866, guid: a1b7ddbdf00f63947a1bbc281350a20b, type: 3}

@@ -688,7 +688,7 @@ PrefabInstance:
     - target: {fileID: 9040093058308520361, guid: f971cdb1c89773d4aaa79e898ac26fed, type: 3}
       propertyPath: randomSceneIngame
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1154622346700109545}
     m_RemovedComponents:
     - {fileID: 979713132, guid: f971cdb1c89773d4aaa79e898ac26fed, type: 3}
     - {fileID: 530730314, guid: f971cdb1c89773d4aaa79e898ac26fed, type: 3}
@@ -930,8 +930,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea11fd8401c2c3e4bba3b6d5d80c2aca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberScene: {fileID: 1715100868}
-  countScene: {fileID: 0}
   valueWire: {fileID: 736538231}
   isWire1: 0
   button: {fileID: 0}

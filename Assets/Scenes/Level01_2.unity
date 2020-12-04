@@ -371,6 +371,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9040093058308520361, guid: f971cdb1c89773d4aaa79e898ac26fed, type: 3}
+      propertyPath: randomSceneIngame
+      value: 
+      objectReference: {fileID: 2045860091}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f971cdb1c89773d4aaa79e898ac26fed, type: 3}
 --- !u!114 &1265413697 stripped
@@ -529,8 +533,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea11fd8401c2c3e4bba3b6d5d80c2aca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberScene: {fileID: 1871895978}
-  countScene: {fileID: 0}
   valueWire: {fileID: 1265413697}
   isWire1: 0
   button: {fileID: 0}

@@ -19,7 +19,7 @@ public class loadingContdown : MonoBehaviour
     void Update()
     {
        time += incTimePerSecond * Time.deltaTime;
-       if(time >= 2)
+       if(time >= 1)
        {
            randomtoScene.rndScene();
        }   
