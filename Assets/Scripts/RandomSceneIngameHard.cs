@@ -5,8 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class RandomSceneIngameHard : MonoBehaviour
 {
-  public GameObject numberScene;
+
    
+   [Header("Button manager : ")]
+   public ButtonControllerHard button;
+
+   [Header("Wire manager : ")] 
    public RandomValueWireHard valueWireHard;
    public CountScene countScene;
    
@@ -16,31 +20,23 @@ public class RandomSceneIngameHard : MonoBehaviour
     int numScene;
     // Start is called before the first frame update
     void Start()
-    {
-        numberScene = GameObject.Find("Randomnumber_OBJ");
-        numberScene.GetComponent<RandomController>();
-
-        
+    {         
         valueWireHard = GameObject.Find("Wire").GetComponent<RandomValueWireHard>();
-        countScene = GameObject.Find("CountScene").GetComponent<CountScene>();
+        button = GameObject.Find("Button").GetComponent<ButtonControllerHard>();
     }
 
     // Update is called once per frame
     void Update()
-    {
-        
-        if(isWire1 && isWire2)
+    {    
+       if(isWire1 && isWire2)
+       {
+           SceneManager.LoadScene(10);
+       } 
+
+       if(button.score == 7)
         {
-            rndScene();
+            SceneManager.LoadScene(10);
         }
-
-
     }
-
-    public void rndScene()
-    {
-        numScene = RandomController.ResultRndNumScene;
-        SceneManager.LoadScene(numScene);
-        countScene.valueCountScene ++;
-    }
+    
 }

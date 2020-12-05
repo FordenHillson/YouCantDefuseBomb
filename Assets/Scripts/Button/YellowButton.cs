@@ -2,20 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PinkButton : MonoBehaviour
+public class YellowButton : MonoBehaviour
 {
-     public SpriteRenderer spritePink;
-    private Sprite PinkClickSprite;
-    public int PinkValue = 6;
-    public bool isPink = false;
-
-    
+    public SpriteRenderer spriteYellow;
+    private Sprite YellowClickSprite;
+    public int YellowValue = 8;
+    public bool isYellow = false;
     // Start is called before the first frame update
     void Start()
     {
-        spritePink = GetComponent<SpriteRenderer>();
-        PinkClickSprite = Resources.Load<Sprite>("Pink_Button_isClick");
-        
+        spriteYellow = GetComponent<SpriteRenderer>();
+        YellowClickSprite = Resources.Load<Sprite>("Yellow_Button_isClick");
     }
 
     // Update is called once per frame
@@ -28,11 +25,10 @@ public class PinkButton : MonoBehaviour
             
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
                         
-            if (hit.collider.name == "Pink_Button") {
-                isPink = true;
-                spritePink.sprite = PinkClickSprite;            
+            if (hit.collider.name == "Yellow_Button") {
+                isYellow = true;
+                spriteYellow.sprite = YellowClickSprite;            
             }
-        }           
-
+        }
     }
 }

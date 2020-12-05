@@ -7,7 +7,7 @@ public class RandomSceneIngameNormal : MonoBehaviour
 {
    [Header("Button manager : ")]
    public ButtonControllerNormal button;
-   int numScene;
+   
 
    void Start()
     {          
