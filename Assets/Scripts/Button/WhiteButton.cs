@@ -8,14 +8,14 @@ public class WhiteButton : MonoBehaviour
     private Sprite whiteClickSprite;
     public int whiteValue = 5;
     public bool isWhite = false;
-
+    public Collider2D whiteCol;
     
     // Start is called before the first frame update
     void Start()
     {
         spriteWhite = GetComponent<SpriteRenderer>();
         whiteClickSprite = Resources.Load<Sprite>("White_Button_isClick");
-        
+        whiteCol = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -30,7 +30,8 @@ public class WhiteButton : MonoBehaviour
                         
             if (hit.collider.name == "White_Button") {
                 isWhite = true;
-                spriteWhite.sprite = whiteClickSprite;            
+                spriteWhite.sprite = whiteClickSprite; 
+                whiteCol.enabled = false;           
             }
         }          
 

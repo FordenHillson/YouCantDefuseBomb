@@ -8,11 +8,13 @@ public class LightGreen_2Button : MonoBehaviour
     private Sprite LightGreenClickSprite;
     public int LightGreenValue = 7;
     public bool isLightGreen = false;
+    public Collider2D lightGreenCol;
     // Start is called before the first frame update
     void Start()
     {
         spriteLightGreen = GetComponent<SpriteRenderer>();
         LightGreenClickSprite = Resources.Load<Sprite>("LightGreen2_Button_isClick");
+        lightGreenCol = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -27,7 +29,8 @@ public class LightGreen_2Button : MonoBehaviour
                         
             if (hit.collider.name == "LightGreen2_Button") {
                 isLightGreen = true;
-                spriteLightGreen.sprite = LightGreenClickSprite;            
+                spriteLightGreen.sprite = LightGreenClickSprite;
+                lightGreenCol.enabled = false;            
             }
         }
     }

@@ -128,6 +128,20 @@ public class ButtonControllerNormal : MonoBehaviour
                 score++;
                 whiteButton.isWhite = false;
             }
+        }
+
+        if(pinkButton.isPink)
+        {
+            if(pinkButton.PinkValue == resultButton)
+            {
+                Debug.Log("Boom");                
+            }
+            else
+            {
+                Debug.Log("Ok");
+                score++;
+                pinkButton.isPink = false;
+            }            
         }              
              
     } 

@@ -11,6 +11,9 @@ public class ButtonControllerHard : MonoBehaviour
     public LightBlueButton lightBlueButton;
     public WhiteButton whiteButton;
     public PinkButton pinkButton;
+    public LightGreen_2Button lightGreenButton;
+    public PurpleButton purpleButton;
+    public YellowButton yellowButton;
 
     [Header("result : ")]
     public int resultButton;
@@ -33,6 +36,9 @@ public class ButtonControllerHard : MonoBehaviour
         lightBlueButton = GameObject.Find("LightBlue_Button").GetComponent<LightBlueButton>();
         whiteButton = GameObject.Find("White_Button").GetComponent<WhiteButton>();
         pinkButton = GameObject.Find("Pink_Button").GetComponent<PinkButton>();
+        lightGreenButton = GameObject.Find("LightGreen2_Button").GetComponent<LightGreen_2Button>();
+        purpleButton = GameObject.Find("Purple_Button").GetComponent<PurpleButton>();
+        yellowButton = GameObject.Find("Yellow_Button").GetComponent<YellowButton>();
 
         randomController();
     }
@@ -68,17 +74,34 @@ public class ButtonControllerHard : MonoBehaviour
             {
                 Debug.Log("Ok");
                 score ++;
-                blueButton.isBlue = false;
-                                               
-            }            
+                blueButton.isBlue = false;                                               
+            }
+            
+            if(blueButton.blueValue == resultButton2)
+            {
+                Debug.Log("Boom");                                            
+            }
+            else
+            {
+                Debug.Log("Ok");
+                score ++;
+                blueButton.isBlue = false;                                               
+            }
+
+            if(blueButton.blueValue == resultButton && blueButton.blueValue != resultButton2)
+            {
+                score --;
+            }else if(blueButton.blueValue != resultButton && blueButton.blueValue == resultButton2)
+            {
+                score --;
+            }
         }
 
         if(greenButton.isGreen)
         {
             if(greenButton.greenValue == resultButton)
             {
-                Debug.Log("Boom");
-                
+                Debug.Log("Boom");                
             }
             else
             {
@@ -86,7 +109,27 @@ public class ButtonControllerHard : MonoBehaviour
                 score ++;
                 greenButton.isGreen = false;
             }
+
+            if(greenButton.greenValue == resultButton2)
+            {
+                Debug.Log("Boom");                
+            }
+            else
+            {
+                Debug.Log("Ok");
+                score ++;
+                greenButton.isGreen = false;
+            }
+
+            if(greenButton.greenValue == resultButton && greenButton.greenValue != resultButton2)
+            {
+                score --;
+            }else if(greenButton.greenValue != resultButton && greenButton.greenValue == resultButton2)
+            {
+                score --;
+            }
         }
+        
 
         if(orangeButton.isOrange)
         {
@@ -98,10 +141,31 @@ public class ButtonControllerHard : MonoBehaviour
             else
             {
                 Debug.Log("Ok");
-                score++;
+                score ++;
                 orangeButton.isOrange = false;
             }
+
+            if(orangeButton.orangeValue == resultButton2)
+            {
+                Debug.Log("Boom");
+                
+            }
+            else
+            {
+                Debug.Log("Ok");
+                score ++;
+                orangeButton.isOrange = false;
+            }
+
+            if(orangeButton.orangeValue == resultButton && orangeButton.orangeValue != resultButton2)
+            {
+                score --;
+            }else if(orangeButton.orangeValue != resultButton && orangeButton.orangeValue == resultButton2)
+            {
+                score --;
+            }
         }
+
 
         if(lightBlueButton.isLightBlue)
         {
@@ -113,10 +177,31 @@ public class ButtonControllerHard : MonoBehaviour
             else
             {
                 Debug.Log("Ok");
-                score++;
+                score ++;
                 lightBlueButton.isLightBlue = false;
             }
+
+            if(lightBlueButton.lightBlueValue == resultButton2)
+            {
+                Debug.Log("Boom");
+                
+            }
+            else
+            {
+                Debug.Log("Ok");
+                score ++;
+                lightBlueButton.isLightBlue = false;
+            }
+
+            if(lightBlueButton.lightBlueValue == resultButton && lightBlueButton.lightBlueValue != resultButton2)
+            {
+                score --;
+            }else if(lightBlueButton.lightBlueValue != resultButton && lightBlueButton.lightBlueValue == resultButton2)
+            {
+                score --;
+            }
         }
+        
 
         if(whiteButton.isWhite)
         {
@@ -128,10 +213,169 @@ public class ButtonControllerHard : MonoBehaviour
             else
             {
                 Debug.Log("Ok");
-                score++;
+                score ++;
                 whiteButton.isWhite = false;
             }
-        }              
+
+            if(whiteButton.whiteValue == resultButton2)
+            {
+                Debug.Log("Boom");
+                
+            }
+            else
+            {
+                Debug.Log("Ok");
+                score ++;
+                whiteButton.isWhite = false;
+            }
+
+            if(whiteButton.whiteValue == resultButton && whiteButton.whiteValue != resultButton2)
+            {
+                score --;
+            }else if(whiteButton.whiteValue != resultButton && whiteButton.whiteValue == resultButton2)
+            {
+                score --;
+            }
+        }  
+
+        if(pinkButton.isPink)
+        {
+            if(pinkButton.PinkValue == resultButton)
+            {
+                Debug.Log("Boom");
+                
+            }
+            else
+            {
+                Debug.Log("Ok");
+                score ++;
+                pinkButton.isPink = false;
+            }
+
+            if(pinkButton.PinkValue == resultButton2)
+            {
+                Debug.Log("Boom");                
+            }
+            else
+            {
+                Debug.Log("Ok");
+                score ++;
+                pinkButton.isPink = false;  
+            }
+
+            if(pinkButton.PinkValue == resultButton && pinkButton.PinkValue != resultButton2)
+            {
+                score --;
+            }else if(pinkButton.PinkValue != resultButton && pinkButton.PinkValue == resultButton2)
+            {
+                score --;
+            }
+        }
+
+        if(lightGreenButton.isLightGreen)
+        {
+            if(lightGreenButton.LightGreenValue == resultButton)
+            {
+                Debug.Log("Boom");
+                
+            }
+            else
+            {
+                Debug.Log("Ok");
+                score ++;
+                lightGreenButton.isLightGreen = false;
+            }
+
+            if(lightGreenButton.LightGreenValue == resultButton2)
+            {
+                Debug.Log("Boom");
+                
+            }
+            else
+            {
+                Debug.Log("Ok");
+                score ++;
+                lightGreenButton.isLightGreen = false;  
+            }
+
+            if(lightGreenButton.LightGreenValue == resultButton && lightGreenButton.LightGreenValue != resultButton2)
+            {
+                score --;
+            }else if(lightGreenButton.LightGreenValue != resultButton && lightGreenButton.LightGreenValue == resultButton2)
+            {
+                score --;
+            }
+        }
+        
+        if(purpleButton.isPurple)
+        {
+            if(purpleButton.PurpleValue == resultButton)
+            {
+                Debug.Log("Boom");
+                
+            }
+            else
+            {
+                Debug.Log("Ok");
+                score ++;
+                purpleButton.isPurple = false;
+            }
+
+            if(purpleButton.PurpleValue == resultButton2)
+            {
+                Debug.Log("Boom");
+                
+            }
+            else
+            {
+                Debug.Log("Ok");
+                score ++;
+                purpleButton.isPurple = false;  
+            }
+
+            if(purpleButton.PurpleValue == resultButton && purpleButton.PurpleValue != resultButton2)
+            {
+                score --;
+            }else if(purpleButton.PurpleValue != resultButton && purpleButton.PurpleValue == resultButton2)
+            {
+                score --;
+            }
+        }
+
+        if(yellowButton.isYellow)
+        {
+            if(yellowButton.YellowValue == resultButton)
+            {
+                Debug.Log("Boom");
+                
+            }
+            else
+            {
+                Debug.Log("Ok");
+                score ++;
+                yellowButton.isYellow = false;
+            }
+
+            if(yellowButton.YellowValue == resultButton2)
+            {
+                Debug.Log("Boom");
+                
+            }
+            else
+            {
+                Debug.Log("Ok");
+                score ++;
+                yellowButton.isYellow = false;  
+            }
+
+            if(yellowButton.YellowValue == resultButton && yellowButton.YellowValue != resultButton2)
+            {
+                score --;
+            }else if(yellowButton.YellowValue != resultButton && yellowButton.YellowValue == resultButton2)
+            {
+                score --;
+            }
+        }             
              
     }
 }

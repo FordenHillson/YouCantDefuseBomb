@@ -8,6 +8,7 @@ public class BlueButton : MonoBehaviour
     private Sprite blueClickSprite;
     public int blueValue = 1;
     public bool isBlue = false;
+    public Collider2D blueCol;
 
     
     // Start is called before the first frame update
@@ -15,6 +16,7 @@ public class BlueButton : MonoBehaviour
     {
         spriteBlue = GetComponent<SpriteRenderer>();
         blueClickSprite = Resources.Load<Sprite>("Blue_Button_isClick");
+        blueCol = GetComponent<Collider2D>();
         
     }
 
@@ -29,12 +31,11 @@ public class BlueButton : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
                         
             if (hit.collider.name == "Blue_Button") {
-                isBlue = true;
-                spriteBlue.sprite = blueClickSprite;            
+                isBlue = true;                
+                spriteBlue.sprite = blueClickSprite;  
+                blueCol.enabled = false;                      
             }
-        }
-
-           
+        }         
 
     }
 }

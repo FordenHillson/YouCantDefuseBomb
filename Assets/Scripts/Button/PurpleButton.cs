@@ -8,11 +8,13 @@ public class PurpleButton : MonoBehaviour
     private Sprite PurpleClickSprite;
     public int PurpleValue = 8;
     public bool isPurple = false;
+    public Collider2D purpleCol;
     // Start is called before the first frame update
     void Start()
     {
         spritePurple = GetComponent<SpriteRenderer>();
         PurpleClickSprite = Resources.Load<Sprite>("Purple_Button_isClick");
+        purpleCol = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -27,7 +29,8 @@ public class PurpleButton : MonoBehaviour
                         
             if (hit.collider.name == "Purple_Button") {
                 isPurple = true;
-                spritePurple.sprite = PurpleClickSprite;            
+                spritePurple.sprite = PurpleClickSprite;
+                purpleCol.enabled = false;            
             }
         }       
     }

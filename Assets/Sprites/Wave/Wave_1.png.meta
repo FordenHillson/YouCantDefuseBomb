@@ -1,0 +1,484 @@
+fileFormatVersion: 2
+guid: 6e59860d6ded8b24196d5af1d6b0fcb3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7112096874698072490
+    second: Wave_1_0
+  - first:
+      213: -8556403568337032268
+    second: Wave_1_1
+  - first:
+      213: -4930524230260735868
+    second: Wave_1_2
+  - first:
+      213: 7621372626555808130
+    second: Wave_1_3
+  - first:
+      213: -8383278412997926432
+    second: Wave_1_4
+  - first:
+      213: 2839302754666261896
+    second: Wave_1_5
+  - first:
+      213: 5447510431817531546
+    second: Wave_1_6
+  - first:
+      213: 1632109984728929970
+    second: Wave_1_7
+  - first:
+      213: 5682256241551416034
+    second: Wave_1_8
+  - first:
+      213: -5096268177453481519
+    second: Wave_1_9
+  - first:
+      213: -6638158298077250813
+    second: Wave_1_10
+  - first:
+      213: -8616042586987094021
+    second: Wave_1_11
+  - first:
+      213: -4751675523632188140
+    second: Wave_1_12
+  - first:
+      213: -4432938293634783464
+    second: Wave_1_13
+  - first:
+      213: 713378021311087612
+    second: Wave_1_0
+  - first:
+      213: 4180639671792511358
+    second: Wave_1_1
+  - first:
+      213: -2353517511836794089
+    second: Wave_1_2
+  - first:
+      213: -8247795948888252531
+    second: Wave_1_3
+  - first:
+      213: 6468052285730316262
+    second: Wave_1_4
+  - first:
+      213: 1784670699505126056
+    second: Wave_1_5
+  - first:
+      213: 6778977187107987859
+    second: Wave_1_6
+  - first:
+      213: -8817970921778233756
+    second: Wave_1_7
+  - first:
+      213: 9003277668537387900
+    second: Wave_1_8
+  - first:
+      213: 3644710457939604714
+    second: Wave_1_9
+  - first:
+      213: -926996610158521021
+    second: Wave_1_10
+  - first:
+      213: 5950652538987914517
+    second: Wave_1_11
+  - first:
+      213: -2472668887454884905
+    second: Wave_1_12
+  - first:
+      213: 3265246930840048386
+    second: Wave_1_13
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Wave_1_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 49
+        width: 108
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf381ded78d66e900800000000000000
+      internalID: 713378021311087612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wave_1_1
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 49
+        width: 108
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e79291ba1ad940a30800000000000000
+      internalID: 4180639671792511358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wave_1_2
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 49
+        width: 107
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7138e4eda40a65fd0800000000000000
+      internalID: -2353517511836794089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wave_1_3
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 49
+        width: 108
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8f1c9e7841f98d80800000000000000
+      internalID: -8247795948888252531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wave_1_4
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 49
+        width: 108
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6efdb9fd84323c950800000000000000
+      internalID: 6468052285730316262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wave_1_5
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 49
+        width: 108
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aa0d0dab8c64c810800000000000000
+      internalID: 1784670699505126056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wave_1_6
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 49
+        width: 107
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3916c0ac5d3c31e50800000000000000
+      internalID: 6778977187107987859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wave_1_7
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 49
+        width: 108
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46e3faf8a2640a580800000000000000
+      internalID: -8817970921778233756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wave_1_8
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 49
+        width: 108
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7bc06f865112fc70800000000000000
+      internalID: 9003277668537387900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wave_1_9
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 49
+        width: 107
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae434aad9dc949230800000000000000
+      internalID: 3644710457939604714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wave_1_10
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 49
+        width: 108
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34592879e75a223f0800000000000000
+      internalID: -926996610158521021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wave_1_11
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 49
+        width: 108
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 515a620d4f6f49250800000000000000
+      internalID: 5950652538987914517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wave_1_12
+      rect:
+        serializedVersion: 2
+        x: 1765
+        y: 49
+        width: 108
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7db57146fb05fadd0800000000000000
+      internalID: -2472668887454884905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wave_1_13
+      rect:
+        serializedVersion: 2
+        x: 1912
+        y: 49
+        width: 107
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 203d7a898cc705d20800000000000000
+      internalID: 3265246930840048386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

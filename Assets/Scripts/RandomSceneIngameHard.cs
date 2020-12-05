@@ -33,7 +33,7 @@ public class RandomSceneIngameHard : MonoBehaviour
            SceneManager.LoadScene(10);
        } 
 
-       if(button.score == 7)
+       if(button.score >= 14)
         {
             SceneManager.LoadScene(10);
         }

@@ -8,6 +8,7 @@ public class LightBlueButton : MonoBehaviour
     private Sprite lightBlueClickSprite;
     public int lightBlueValue = 4;
     public bool isLightBlue = false;
+    public Collider2D lightblueCol;
 
     
     // Start is called before the first frame update
@@ -15,7 +16,7 @@ public class LightBlueButton : MonoBehaviour
     {
         spriteLightBlue = GetComponent<SpriteRenderer>();
         lightBlueClickSprite = Resources.Load<Sprite>("LightBlue_Button_isClick");
-        
+        lightblueCol = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -30,7 +31,8 @@ public class LightBlueButton : MonoBehaviour
                         
             if (hit.collider.name == "LightBlue_Button") {
                 isLightBlue = true;
-                spriteLightBlue.sprite = lightBlueClickSprite;            
+                spriteLightBlue.sprite = lightBlueClickSprite;
+                lightblueCol.enabled = false;            
             }
         }
 

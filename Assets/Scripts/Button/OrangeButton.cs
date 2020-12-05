@@ -9,11 +9,13 @@ public class OrangeButton : MonoBehaviour
     public SpriteRenderer spriteOrange;
     private Sprite orangeClickSprite;
     public bool isOrange = false;
+    public Collider2D orangeCol;
     // Start is called before the first frame update
     void Start()
     {
         spriteOrange = GetComponent<SpriteRenderer>();
         orangeClickSprite = Resources.Load<Sprite>("Orange_Button_isClick");
+        orangeCol = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -28,7 +30,8 @@ public class OrangeButton : MonoBehaviour
                         
             if (hit.collider.name == "Orange_Button") {
                 isOrange = true;
-                spriteOrange.sprite = orangeClickSprite;            
+                spriteOrange.sprite = orangeClickSprite;
+                orangeCol.enabled = false;            
             }
 
         }

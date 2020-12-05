@@ -6,13 +6,15 @@ public class YellowButton : MonoBehaviour
 {
     public SpriteRenderer spriteYellow;
     private Sprite YellowClickSprite;
-    public int YellowValue = 8;
+    public int YellowValue = 9;
     public bool isYellow = false;
+    public Collider2D yellowCol;
     // Start is called before the first frame update
     void Start()
     {
         spriteYellow = GetComponent<SpriteRenderer>();
         YellowClickSprite = Resources.Load<Sprite>("Yellow_Button_isClick");
+        yellowCol = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -27,7 +29,8 @@ public class YellowButton : MonoBehaviour
                         
             if (hit.collider.name == "Yellow_Button") {
                 isYellow = true;
-                spriteYellow.sprite = YellowClickSprite;            
+                spriteYellow.sprite = YellowClickSprite;
+                yellowCol.enabled = false;            
             }
         }
     }

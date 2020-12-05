@@ -8,6 +8,7 @@ public class PinkButton : MonoBehaviour
     private Sprite PinkClickSprite;
     public int PinkValue = 6;
     public bool isPink = false;
+    public Collider2D pinkCol;
 
     
     // Start is called before the first frame update
@@ -15,7 +16,7 @@ public class PinkButton : MonoBehaviour
     {
         spritePink = GetComponent<SpriteRenderer>();
         PinkClickSprite = Resources.Load<Sprite>("Pink_Button_isClick");
-        
+        pinkCol = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -30,7 +31,8 @@ public class PinkButton : MonoBehaviour
                         
             if (hit.collider.name == "Pink_Button") {
                 isPink = true;
-                spritePink.sprite = PinkClickSprite;            
+                spritePink.sprite = PinkClickSprite;
+                pinkCol.enabled = false;            
             }
         }           
 
