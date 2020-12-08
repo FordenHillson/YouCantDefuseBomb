@@ -10,9 +10,7 @@ public class WaveResultController : MonoBehaviour
     void Start()
     {
         waveController = GameObject.Find("Wave").GetComponent<waveController>();
-        waveAnim = GetComponent<Animator>();
-
-        
+        waveAnim = GetComponent<Animator>();       
     }
 
     // Update is called once per frame
