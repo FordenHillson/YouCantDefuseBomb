@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class waveController : MonoBehaviour
 {
-    public int resultWave;
+    public static int resultWave;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,4 +16,5 @@ public class waveController : MonoBehaviour
     {
         
     }
+    
 }

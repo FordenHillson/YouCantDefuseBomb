@@ -35,13 +35,13 @@ public class RandomController : MonoBehaviour
     {
         if(countScene.valueCountScene <= 5)
         {
-            numberRND = Random.Range(1,3);
+            numberRND = Random.Range(1,4);
         }else if(countScene.valueCountScene > 5 && countScene.valueCountScene <= 10)
         {
-           numberRND = Random.Range(4,6); 
+           numberRND = Random.Range(4,7); 
         }else if(countScene.valueCountScene > 10)
         {
-            numberRND = Random.Range(7,9);
+            numberRND = Random.Range(7,10);
         }
 
         
