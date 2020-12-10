@@ -53,7 +53,7 @@ public class waveAnsControllerNormal : MonoBehaviour
     {
         if (waveAns == waveControllerNormal.resultWave)
         {
-            SceneManager.LoadScene(10);
+            SceneManager.LoadScene(15);
         }
     }
 }

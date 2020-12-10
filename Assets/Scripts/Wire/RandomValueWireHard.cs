@@ -16,7 +16,17 @@ public class RandomValueWireHard : MonoBehaviour
 
     public CountScene countScene;
     public RandomSceneIngameHard randomSceneIngameHard;
-    
+
+    void Awake()
+    {
+        resultWire = Random.Range(1, 4);
+        resultWire2 = Random.Range(1, 4);
+        if (resultWire2 == resultWire)
+        {
+            resultWire2 = Random.Range(1, 4);
+            Debug.Log("Wire 2 is : " + resultWire2);
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -26,15 +36,6 @@ public class RandomValueWireHard : MonoBehaviour
         whiteWire = GameObject.Find("White_Wire").GetComponent<WhiteWire>();
         countScene = GameObject.Find("CountScene").GetComponent<CountScene>();
         randomSceneIngameHard = GameObject.Find("RndScene").GetComponent<RandomSceneIngameHard>();
-        
-        resultWire = Random.Range(1,4); 
-        resultWire2 = Random.Range(1,4);
-        if(resultWire2 == resultWire)
-        {
-            resultWire2 = Random.Range(1,4);
-            Debug.Log("Wire 2 is : "+resultWire2); 
-        }      
-               
     }
 
     // Update is called once per frame

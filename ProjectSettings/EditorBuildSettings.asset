@@ -9,33 +9,54 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Level01.unity
+    path: Assets/Scenes/MainMenu.unity
+    guid: 647ad9a69a8331c45bbdc85ce42eaf6c
+  - enabled: 1
+    path: Assets/Scenes/StartScene.unity
+    guid: 8d257a96dffd4164ead88867cfdda5bf
+  - enabled: 1
+    path: Assets/Scenes/GameplaysScenes/Level01.unity
     guid: 4a1147bb27dfc1f40b6b3c972d0081fa
   - enabled: 1
-    path: Assets/Scenes/Level02.unity
+    path: Assets/Scenes/GameplaysScenes/Level02.unity
     guid: 796d796fdecb85f40933d0181d8a0fc3
   - enabled: 1
-    path: Assets/Scenes/Level03.unity
+    path: Assets/Scenes/GameplaysScenes/Level03.unity
     guid: b3c31b88e7af6ee4cbc9ecebd2cab874
   - enabled: 1
-    path: Assets/Scenes/Level01_2.unity
+    path: Assets/Scenes/GameplaysScenes/Level04.unity
+    guid: e9cd6d3cee17396489dddd3844ebee59
+  - enabled: 1
+    path: Assets/Scenes/GameplaysScenes/Level01_2.unity
     guid: 7450ccd18e84c8c4b815739c2d6c0c41
   - enabled: 1
-    path: Assets/Scenes/Level02_2.unity
+    path: Assets/Scenes/GameplaysScenes/Level02_2.unity
     guid: 96e5782042e9e6d4391f01a531e0b99e
   - enabled: 1
-    path: Assets/Scenes/Level03_2.unity
+    path: Assets/Scenes/GameplaysScenes/Level03_2.unity
     guid: a45f7df90e2028f43b1ac60833c2913f
   - enabled: 1
-    path: Assets/Scenes/Level01_3.unity
+    path: Assets/Scenes/GameplaysScenes/Level04_2.unity
+    guid: 76a089382dad9404e8ed4e4e7d558e1f
+  - enabled: 1
+    path: Assets/Scenes/GameplaysScenes/Level01_3.unity
     guid: edee784b433dd8b4cb77765a3f5edebe
   - enabled: 1
-    path: Assets/Scenes/Level02_3.unity
+    path: Assets/Scenes/GameplaysScenes/Level02_3.unity
     guid: 9de696ecfc537854b96b0296a08a243c
   - enabled: 1
-    path: Assets/Scenes/Level03_3.unity
+    path: Assets/Scenes/GameplaysScenes/Level03_3.unity
     guid: c842e45a4fae0af458a243d940baacf0
+  - enabled: 1
+    path: Assets/Scenes/GameplaysScenes/Level04_3.unity
+    guid: 1a1cf882c9128584f9e4ecf6f7dc5e5d
   - enabled: 1
     path: Assets/Scenes/LoadingScene.unity
     guid: f425df52e976d294d88c7de818c00c1b
+  - enabled: 1
+    path: Assets/Scenes/Game Over.unity
+    guid: 3b4b76e995190df40968beaf4beb2e52
+  - enabled: 1
+    path: Assets/Scenes/CreditScene.unity
+    guid: 688686477d8df9649ac4616ee7eb0335
   m_configObjects: {}

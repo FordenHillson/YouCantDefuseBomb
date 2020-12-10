@@ -18,7 +18,7 @@ public class RandomSceneIngameNormal : MonoBehaviour
     {
         if(button.score == 4)
         {
-            SceneManager.LoadScene(10);
+            SceneManager.LoadScene(15);
         }
 
 

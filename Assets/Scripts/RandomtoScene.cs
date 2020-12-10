@@ -24,9 +24,15 @@ public class RandomtoScene : MonoBehaviour
 
     public void rndScene()
     {
-        numScene = RandomController.numberRND;
+        numScene = RandomController.ResultRndNumScene;
         SceneManager.LoadScene(numScene);
         countScene.valueCountScene ++;
         
+    }
+
+    public void startScene()
+    {
+        SceneManager.LoadScene(15);
+        countScene.valueCountScene ++;
     }
 }

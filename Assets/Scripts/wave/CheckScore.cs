@@ -29,7 +29,7 @@ public class CheckScore : MonoBehaviour
         if(isWave1 && isWave2)
         {
             Debug.Log("Pass !");
-            SceneManager.LoadScene(10);
+            SceneManager.LoadScene(15);
         }
     }
 

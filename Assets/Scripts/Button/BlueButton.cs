@@ -30,7 +30,8 @@ public class BlueButton : MonoBehaviour
             
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
                         
-            if (hit.collider.name == "Blue_Button") {
+            if (hit.collider.name == "Blue_Button") 
+            {
                 isBlue = true;                
                 spriteBlue.sprite = blueClickSprite;  
                 blueCol.enabled = false;                      

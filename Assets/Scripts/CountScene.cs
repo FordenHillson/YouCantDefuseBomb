@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class CountScene : MonoBehaviour
 {
-    public int valueCountScene = 0;
+    public int valueCountScene = -1;
     
     // Start is called before the first frame update
     void Awake()

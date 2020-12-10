@@ -44,7 +44,7 @@ public class waveAnsController : MonoBehaviour
     {
         if(waveAns == waveController.resultWave)
         {
-            SceneManager.LoadScene(10);
+            SceneManager.LoadScene(15);
         }
     }
 }

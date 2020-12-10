@@ -27,14 +27,14 @@ public class RandomSceneIngame : MonoBehaviour
     void Update()
     {
         
-        if(isWire1 )
+        if(isWire1)
         {
-            SceneManager.LoadScene(10);
+            SceneManager.LoadScene(15);
         }
 
         if(button.score == 2)
         {
-            SceneManager.LoadScene(10);
+            SceneManager.LoadScene(15);
         }
 
 

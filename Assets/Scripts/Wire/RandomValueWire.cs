@@ -19,7 +19,12 @@ public class RandomValueWire : MonoBehaviour
 
     public CountScene countScene;
     public RandomSceneIngame randomSceneIngame;
-    
+
+    void Awake()
+    {
+        resultWire = Random.Range(1, 4);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,13 +37,7 @@ public class RandomValueWire : MonoBehaviour
         redWire = GameObject.Find("Red_Wire").GetComponent<RedWire>();
         whiteWire = GameObject.Find("White_Wire").GetComponent<WhiteWire>();
         countScene = GameObject.Find("CountScene").GetComponent<CountScene>();
-        randomSceneIngame = GameObject.Find("RndScene").GetComponent<RandomSceneIngame>();
-        
-        resultWire = Random.Range(1,4);            
-        
-
-        
-
+        randomSceneIngame = GameObject.Find("RndScene 1").GetComponent<RandomSceneIngame>();
         Debug.Log("Wire is : "+resultWire);        
                
     }

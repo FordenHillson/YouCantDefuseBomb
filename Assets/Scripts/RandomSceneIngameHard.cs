@@ -30,12 +30,12 @@ public class RandomSceneIngameHard : MonoBehaviour
     {    
        if(isWire1 && isWire2)
        {
-           SceneManager.LoadScene(10);
+           SceneManager.LoadScene(15);
        } 
 
        if(button.score >= 14)
         {
-            SceneManager.LoadScene(10);
+            SceneManager.LoadScene(15);
         }
     }
     
