@@ -9,7 +9,7 @@ public class WaveResultController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        waveController = GameObject.Find("wave").GetComponent<waveController>();
+        waveController = GameObject.Find("Wave").GetComponent<waveController>();
         waveAnim = GetComponent<Animator>();       
     }
 
