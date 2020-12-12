@@ -9,10 +9,13 @@ public class loadingContdown : MonoBehaviour
     public float incTimePerSecond = 1;
 
     public RandomtoScene randomtoScene;
+    public TimerContoller timer;
     // Start is called before the first frame update
     void Start()
     {
         randomtoScene = GameObject.Find("rndScene").GetComponent<RandomtoScene>();
+        timer = GameObject.Find("Timer").GetComponent<TimerContoller>();
+        timer.timerIsRunning = false;
     }
 
     // Update is called once per frame

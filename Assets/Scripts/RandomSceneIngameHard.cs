@@ -15,17 +15,17 @@ public class RandomSceneIngameHard : MonoBehaviour
    public bool isWire1 = false;
    public bool isWire2 = false;
 
-    [Header("Timer manager : ")]
+    [Header("Timer Manager : ")]
     public TimerContoller timer;
 
-    int numScene;
-    // Start is called before the first frame update
     void Start()
-    {         
+    {
+        timer = GameObject.Find("Timer").GetComponent<TimerContoller>();
+        timer.timerIsRunning = true;
         valueWireHard = GameObject.Find("Wire").GetComponent<RandomValueWireHard>();
         button = GameObject.Find("Button").GetComponent<ButtonControllerHard>();
-        timer = GameObject.Find("Timer").GetComponent<TimerContoller>();
-        timer.timerIsPause = false;
+
+        
     }
 
     // Update is called once per frame
@@ -34,13 +34,13 @@ public class RandomSceneIngameHard : MonoBehaviour
        if(isWire1 && isWire2)
        {
             SceneManager.LoadScene(15);
-            timer.timerIsPause = true;
+            timer.timerIsRunning = false;
        } 
 
        if(button.score >= 14)
        {
             SceneManager.LoadScene(15);
-            timer.timerIsPause = true;
+            timer.timerIsRunning = false;
        }
     }
     

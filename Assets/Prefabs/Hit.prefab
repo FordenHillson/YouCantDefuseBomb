@@ -277,7 +277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointA: {x: -1.4703, y: 1.12, z: 0}
   pointB: {x: -1.4703, y: -1.32, z: 0}
-  speed: 1
+  speed: 0.4
   isArea: 0
 --- !u!1 &3235493478327385180
 GameObject:
@@ -408,3 +408,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   line: {fileID: 1264718911}
+  timer: {fileID: 0}

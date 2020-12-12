@@ -10,11 +10,16 @@ public class waveAnsControllerNormal : MonoBehaviour
     public float waveAnsValue;
     public Animator waveAnsAnim;
     public int waveAns;
+
+    public TimerContoller timer;
+    
     // Start is called before the first frame update
     void Start()
     {
         waveSlider = GameObject.Find("Slider").GetComponent<Slider>();
         waveAnsAnim = GetComponent<Animator>();
+        timer = GameObject.Find("Timer").GetComponent<TimerContoller>();
+        timer.timerIsRunning = true;
     }
 
     // Update is called once per frame
@@ -54,6 +59,7 @@ public class waveAnsControllerNormal : MonoBehaviour
         if (waveAns == waveControllerNormal.resultWave)
         {
             SceneManager.LoadScene(15);
+            timer.timerIsRunning = false;
         }
     }
 }

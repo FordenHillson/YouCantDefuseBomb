@@ -6,11 +6,14 @@ using UnityEngine.SceneManagement;
 public class HitController : MonoBehaviour
 {
     public lineMove line;
-    
+    public TimerContoller timer;
+
     // Start is called before the first frame update
     void Start()
-    {
-        line = GameObject.Find("Line").GetComponent<lineMove>();       
+    {   
+        line = GameObject.Find("Line").GetComponent<lineMove>();
+        timer = GameObject.Find("Timer").GetComponent<TimerContoller>();
+        timer.timerIsRunning = true;
     }
 
     // Update is called once per frame
@@ -25,6 +28,7 @@ public class HitController : MonoBehaviour
         {
             Debug.Log("pass");
             SceneManager.LoadScene(15);
+            timer.timerIsRunning = false;
         }    
     }
 }

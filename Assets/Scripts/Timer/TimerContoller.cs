@@ -8,7 +8,7 @@ public class TimerContoller : MonoBehaviour
 {
     public float timeRemaining = 100;
     public bool timerIsRunning = false;
-    public bool timerIsPause = false;
+    public bool isBoom = false;
     public Text timeText;
     public GameObject canvasTime;
     public CountScene countScene;
@@ -35,24 +35,33 @@ public class TimerContoller : MonoBehaviour
         }
 
         if (timerIsRunning)
-        {
-            if (!timerIsPause)
+        {            
+            if (timeRemaining > 0)
             {
-                if (timeRemaining > 0)
-                {
-                    timeRemaining -= Time.deltaTime;
-                }
-                else
-                {
-                    Debug.Log("Time has run out!");
-                    timeRemaining = 0;
-                    timerIsRunning = false;
-                    SceneManager.LoadScene(16);
-                }
+               timeRemaining -= Time.deltaTime;
             }
+            else
+            {
+               Debug.Log("Time has run out!");
+               timeRemaining = 0;
+               timerIsRunning = false;
+               SceneManager.LoadScene(18);
+               canvasTime.SetActive(false);
+                Destroy(this.gameObject);
+            }                      
             canvasTime.SetActive(true);
             DisplayTime(timeRemaining);
         }
+        if(!timerIsRunning)
+        {
+            canvasTime.SetActive(false);
+        }
+
+        if(timerIsRunning)
+        {
+            
+        }
+        
     }
 
     void DisplayTime(float timeToDisplay)

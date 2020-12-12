@@ -15,12 +15,18 @@ public class CheckScore : MonoBehaviour
     [Header("Check")]
     public bool isWave1 = false;
     public bool isWave2 = false;
+
+    [Header("Timer : ")]
+    public TimerContoller timer;
+
     // Start is called before the first frame update
     void Start()
     {
         waveController = GameObject.Find("wave").GetComponent<waveControllerHard>();
         waveAns = GameObject.Find("Wave_Answer").GetComponent<waveAnsControllerHard>();
         waveAns2 = GameObject.Find("Wave_Answer2").GetComponent<waveAns2ControllerHard>();
+        timer = GameObject.Find("Timer").GetComponent<TimerContoller>();
+        timer.timerIsRunning = true;
     }
 
     // Update is called once per frame
@@ -30,6 +36,7 @@ public class CheckScore : MonoBehaviour
         {
             Debug.Log("Pass !");
             SceneManager.LoadScene(15);
+            timer.timerIsRunning = false;
         }
     }
 

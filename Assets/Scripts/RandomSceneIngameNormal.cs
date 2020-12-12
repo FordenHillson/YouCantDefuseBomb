@@ -10,11 +10,12 @@ public class RandomSceneIngameNormal : MonoBehaviour
 
     [Header("Timer manager : ")]
     public TimerContoller timer;
+
     void Start()
-    {          
-       button = GameObject.Find("Button").GetComponent<ButtonControllerNormal>();
+    {
+        button = GameObject.Find("Button").GetComponent<ButtonControllerNormal>();
         timer = GameObject.Find("Timer").GetComponent<TimerContoller>();
-        timer.timer
+        timer.timerIsRunning = true;
     }
 
     void Update()
@@ -22,8 +23,7 @@ public class RandomSceneIngameNormal : MonoBehaviour
         if(button.score == 4)
         {
             SceneManager.LoadScene(15);
+            timer.timerIsRunning = false;
         }
-
-
     }
 }

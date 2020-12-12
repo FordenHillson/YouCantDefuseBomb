@@ -388,6 +388,7 @@ MonoBehaviour:
   countScene: {fileID: 0}
   isWire1: 0
   isWire2: 0
+  timer: {fileID: 0}
 --- !u!1 &81478670 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3737042960852634106, guid: 858d0306848d20d4a82749ee836295ae, type: 3}
@@ -1257,6 +1258,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1887127031}
     m_Modifications:
+    - target: {fileID: 3070916015562662562, guid: a04687673f40d7d438163be27565bc6d, type: 3}
+      propertyPath: isBlue
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3070916015562662562, guid: a04687673f40d7d438163be27565bc6d, type: 3}
       propertyPath: blueCol
       value: 

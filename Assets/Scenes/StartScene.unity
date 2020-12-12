@@ -595,6 +595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeRemaining: 10
   timerIsRunning: 0
+  isBoom: 0
   timeText: {fileID: 1158095812}
   canvasTime: {fileID: 324084283}
   countScene: {fileID: 1130801833}
@@ -833,11 +834,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 585472496b196a245a491f5a263f51d2, type: 3}
-    m_FontSize: 55
+    m_FontSize: 90
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 55
+    m_MaxSize: 95
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -869,8 +870,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -664, y: 346}
-  m_SizeDelta: {x: 356.8352, y: 147.03711}
+  m_AnchoredPosition: {x: -528.6, y: 346}
+  m_SizeDelta: {x: 671.9026, y: 147.03711}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1581751897 stripped
 MonoBehaviour:
