@@ -4,9 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class RandomSceneIngameHard : MonoBehaviour
-{
-
-   
+{   
    [Header("Button manager : ")]
    public ButtonControllerHard button;
 
@@ -16,13 +14,18 @@ public class RandomSceneIngameHard : MonoBehaviour
    
    public bool isWire1 = false;
    public bool isWire2 = false;
-   
+
+    [Header("Timer manager : ")]
+    public TimerContoller timer;
+
     int numScene;
     // Start is called before the first frame update
     void Start()
     {         
         valueWireHard = GameObject.Find("Wire").GetComponent<RandomValueWireHard>();
         button = GameObject.Find("Button").GetComponent<ButtonControllerHard>();
+        timer = GameObject.Find("Timer").GetComponent<TimerContoller>();
+        timer.timerIsPause = false;
     }
 
     // Update is called once per frame
@@ -30,13 +33,15 @@ public class RandomSceneIngameHard : MonoBehaviour
     {    
        if(isWire1 && isWire2)
        {
-           SceneManager.LoadScene(15);
+            SceneManager.LoadScene(15);
+            timer.timerIsPause = true;
        } 
 
        if(button.score >= 14)
-        {
+       {
             SceneManager.LoadScene(15);
-        }
+            timer.timerIsPause = true;
+       }
     }
     
 }

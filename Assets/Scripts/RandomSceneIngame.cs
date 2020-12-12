@@ -13,14 +13,19 @@ public class RandomSceneIngame : MonoBehaviour
 
    [Header("Button manager : ")]
    public ButtonController button;
-   
-   
+
+   [Header("Timer Manager : ")]
+   public TimerContoller timer;
+
     int numScene;
     // Start is called before the first frame update
     void Start()
     { 
        valueWire = GameObject.Find("Wire").GetComponent<RandomValueWire>();        
        button = GameObject.Find("Button").GetComponent<ButtonController>();
+       timer = GameObject.Find("Timer").GetComponent<TimerContoller>();
+
+        timer.timerIsPause = false;
     }
 
     // Update is called once per frame
@@ -30,11 +35,13 @@ public class RandomSceneIngame : MonoBehaviour
         if(isWire1)
         {
             SceneManager.LoadScene(15);
+            timer.timerIsPause = true;
         }
 
         if(button.score == 2)
         {
             SceneManager.LoadScene(15);
+            timer.timerIsPause = true;
         }
 
 

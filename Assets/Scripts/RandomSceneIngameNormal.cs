@@ -7,11 +7,14 @@ public class RandomSceneIngameNormal : MonoBehaviour
 {
    [Header("Button manager : ")]
    public ButtonControllerNormal button;
-   
 
-   void Start()
+    [Header("Timer manager : ")]
+    public TimerContoller timer;
+    void Start()
     {          
        button = GameObject.Find("Button").GetComponent<ButtonControllerNormal>();
+        timer = GameObject.Find("Timer").GetComponent<TimerContoller>();
+        timer.timer
     }
 
     void Update()

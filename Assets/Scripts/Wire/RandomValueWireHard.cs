@@ -17,6 +17,8 @@ public class RandomValueWireHard : MonoBehaviour
     public CountScene countScene;
     public RandomSceneIngameHard randomSceneIngameHard;
 
+    
+
     void Awake()
     {
         resultWire = Random.Range(1, 4);
@@ -36,12 +38,12 @@ public class RandomValueWireHard : MonoBehaviour
         whiteWire = GameObject.Find("White_Wire").GetComponent<WhiteWire>();
         countScene = GameObject.Find("CountScene").GetComponent<CountScene>();
         randomSceneIngameHard = GameObject.Find("RndScene").GetComponent<RandomSceneIngameHard>();
+        
     }
 
     // Update is called once per frame
     void Update()
-    {
-        
+    {        
 
        if(yellowWire.isYellow)
        {
