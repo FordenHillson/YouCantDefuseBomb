@@ -59,4 +59,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CreditScene.unity
     guid: 688686477d8df9649ac4616ee7eb0335
+  - enabled: 1
+    path: Assets/Scenes/BoomScene.unity
+    guid: 132e11660c36b5048922868893224a27
   m_configObjects: {}

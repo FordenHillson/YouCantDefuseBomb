@@ -50,6 +50,8 @@ public class waveAnsController : MonoBehaviour
         {
             SceneManager.LoadScene(15);
             timer.timerIsRunning = false;
+            timer.timeRemaining += 5;
         }
+        
     }
 }

@@ -23,7 +23,9 @@ public class RandomSceneIngameNormal : MonoBehaviour
         if(button.score == 4)
         {
             SceneManager.LoadScene(15);
+            timer.timeRemaining += 5;
             timer.timerIsRunning = false;
         }
     }
+    
 }

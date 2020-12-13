@@ -593,7 +593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88c58354e3cb4ca498237df7654f4da8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 10
+  timeRemaining: 100
   timerIsRunning: 0
   isBoom: 0
   timeText: {fileID: 1158095812}

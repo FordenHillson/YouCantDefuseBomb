@@ -35,6 +35,7 @@ public class CheckScore : MonoBehaviour
         if(isWave1 && isWave2)
         {
             Debug.Log("Pass !");
+            timer.timeRemaining += 5;
             SceneManager.LoadScene(15);
             timer.timerIsRunning = false;
         }
@@ -64,4 +65,5 @@ public class CheckScore : MonoBehaviour
             Debug.Log("wave 2 is incorret");
         }
     }
+
 }

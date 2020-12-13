@@ -7,22 +7,21 @@ public class YellowWire : MonoBehaviour
     public int YellowValue = 1;
     public bool isYellow = false;
     public Animator yellowWire;
+    public AudioSource cutSound;    
+   
     // Start is called before the first frame update
     void Start()
     {
         yellowWire = GetComponent<Animator>();
+        cutSound = GetComponent<AudioSource>();        
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-       if(Input.GetKey("a"))
-       {
-           isYellow = true;
-           yellowWire.SetBool("isCut",true);
-       } 
-
-       if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0)) 
+        {
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
             
@@ -35,9 +34,9 @@ public class YellowWire : MonoBehaviour
             if(hit.collider.name == "Yellow_Wire")
             {
                isYellow = true;
-               yellowWire.SetBool("isCut",true); 
+               yellowWire.SetBool("isCut",true);
+               cutSound.Play();            
             }
-
-        }
+        }        
     }
 }

@@ -16,8 +16,13 @@ public class RandomValueWireHard : MonoBehaviour
 
     public CountScene countScene;
     public RandomSceneIngameHard randomSceneIngameHard;
+    public AudioSource corretSound;
+    public AudioSource wrongSound;    
+    public bool yellowSound;
+    public bool blueSound;
+    public bool redSound;
+    public bool whiteSound;
 
-    
 
     void Awake()
     {
@@ -38,7 +43,14 @@ public class RandomValueWireHard : MonoBehaviour
         whiteWire = GameObject.Find("White_Wire").GetComponent<WhiteWire>();
         countScene = GameObject.Find("CountScene").GetComponent<CountScene>();
         randomSceneIngameHard = GameObject.Find("RndScene").GetComponent<RandomSceneIngameHard>();
-        
+        corretSound = GetComponent<AudioSource>();
+        wrongSound = GetComponent<AudioSource>();
+
+        yellowSound = false;
+        blueSound = false;
+        redSound = false;
+        whiteSound = false;
+
     }
 
     // Update is called once per frame
@@ -51,26 +63,41 @@ public class RandomValueWireHard : MonoBehaviour
            if(yellowWire.YellowValue == resultWire)
            {              
                 Debug.Log("Yes!");    
-                randomSceneIngameHard.isWire1 = true;             
-               
+                randomSceneIngameHard.isWire1 = true;                
            }
            else
            {
-               Debug.Log("No");
-                              
+               Debug.Log("No");                
            }
 
            if(yellowWire.YellowValue == resultWire2)
            {              
                 Debug.Log("Yes!");              
-                randomSceneIngameHard.isWire2 = true;            
-               
+                randomSceneIngameHard.isWire2 = true;               
            }
            else
            {
-               Debug.Log("No");
-                              
-           } 
+               Debug.Log("No");               
+           }
+           
+           if(yellowWire.YellowValue == resultWire && yellowWire.YellowValue != resultWire2)
+           {
+                if (!yellowSound)
+                {
+                    corretSound.Play();
+                    yellowSound = true;
+                }
+           }
+
+           if(yellowWire.YellowValue != resultWire && yellowWire.YellowValue != resultWire2)
+           {
+                if (!yellowSound)
+                {
+                   wrongSound.Play();
+                   yellowSound = true;
+                    
+                }
+           }
 
        }
 
@@ -80,25 +107,40 @@ public class RandomValueWireHard : MonoBehaviour
            if(blueWire.BlueValue == resultWire)
            {              
               Debug.Log("Yes!");   
-              randomSceneIngameHard.isWire1 = true;
-               
+              randomSceneIngameHard.isWire1 = true;              
            }
            else
            {
-               Debug.Log("No");           
-               
+               Debug.Log("No");
+             
            }
 
            if(blueWire.BlueValue == resultWire2)
            {              
               Debug.Log("Yes!");            
-              randomSceneIngameHard.isWire2 = true;
-               
+              randomSceneIngameHard.isWire2 = true;           
            }
            else
            {
-               Debug.Log("No");           
-               
+               Debug.Log("No");            
+           }
+
+           if (blueWire.BlueValue == resultWire && blueWire.BlueValue != resultWire2)
+           {
+               if (!blueSound)
+               {
+                   corretSound.Play();
+                   blueSound = true;
+               }
+           }
+
+           if (blueWire.BlueValue != resultWire && blueWire.BlueValue != resultWire2)
+           {
+               if (!blueSound)
+               {
+                   wrongSound.Play();
+                   blueSound = true;                  
+               }
            }
        }  
        
@@ -108,25 +150,41 @@ public class RandomValueWireHard : MonoBehaviour
            if(redWire.RedValue == resultWire)
            {               
                Debug.Log("Yes!");           
-               randomSceneIngameHard.isWire1 = true;               
+               randomSceneIngameHard.isWire1 = true;                
            }
            else
            {
-               Debug.Log("No");              
-               
+              Debug.Log("No");              
            }
 
            if(redWire.RedValue == resultWire2)
            {               
                Debug.Log("Yes!");
-               randomSceneIngameHard.isWire2 = true;                            
+               randomSceneIngameHard.isWire2 = true;               
            }
            else
            {
                Debug.Log("No");              
-               
            }
-       }
+
+            if (redWire.RedValue == resultWire && redWire.RedValue != resultWire2)
+            {
+                if (!redSound)
+                {
+                    corretSound.Play();
+                    redSound = true;
+                }
+            }
+
+            if (redWire.RedValue != resultWire && redWire.RedValue != resultWire2)
+            {
+                if (!redSound)
+                {
+                    wrongSound.Play();
+                    redSound = true;
+                }
+            }
+        }
 
        if(whiteWire.isWhite)
        {
@@ -134,25 +192,61 @@ public class RandomValueWireHard : MonoBehaviour
            if(whiteWire.WhiteValue == resultWire)
            {              
                Debug.Log("Yes!");            
-               randomSceneIngameHard.isWire1 = true;               
-           }
+               randomSceneIngameHard.isWire1 = true;
+                if (!whiteSound)
+                {
+                    corretSound.Play();
+                    whiteSound = true;
+                }
+            }
            else
            {
-               Debug.Log("No");              
-               
-           }
+               Debug.Log("No");
+                if (!whiteSound)
+                {
+                    wrongSound.Play();
+                    whiteSound = true;
+                }
+            }
 
            if(whiteWire.WhiteValue == resultWire2)
            {              
                Debug.Log("Yes!");             
-               randomSceneIngameHard.isWire2 = true;               
-           }
+               randomSceneIngameHard.isWire2 = true;
+                if (!whiteSound)
+                {
+                    corretSound.Play();
+                    whiteSound = true;
+                }
+            }
            else
            {
-               Debug.Log("No");              
-               
+               Debug.Log("No");
+                if (!whiteSound)
+                {
+                    wrongSound.Play();
+                    whiteSound = true;
+                }
            }
-       }   
+
+            if (whiteWire.WhiteValue == resultWire && whiteWire.WhiteValue != resultWire2)
+            {
+                if (!redSound)
+                {
+                    corretSound.Play();
+                    redSound = true;
+                }
+            }
+
+            if (whiteWire.WhiteValue != resultWire && whiteWire.WhiteValue != resultWire2)
+            {
+                if (!redSound)
+                {
+                    wrongSound.Play();
+                    redSound = true;
+                }
+            }
+        }   
          
     }
 

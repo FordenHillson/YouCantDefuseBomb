@@ -35,17 +35,18 @@ public class RandomSceneIngame : MonoBehaviour
         {
             SceneManager.LoadScene(15);
             timer.timerIsRunning = false;
-        }
+            timer.timeRemaining += 5;
+
+        }        
 
         if(button.score >= 2)
         {
-            Debug.Log("pass");
             SceneManager.LoadScene(15);
             timer.timerIsRunning = false;
-        }
+            timer.timeRemaining += 5;
 
+        }        
 
     }
 
-    
 }

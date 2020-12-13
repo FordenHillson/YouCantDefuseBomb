@@ -7,10 +7,14 @@ public class WhiteWire : MonoBehaviour
     public int WhiteValue = 4;
     public bool isWhite = false;
     public Animator whiteWire;
+    public AudioSource cutSound;
+    
     // Start is called before the first frame update
     void Start()
     {
        whiteWire = GetComponent<Animator>();
+        cutSound = GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
@@ -29,9 +33,9 @@ public class WhiteWire : MonoBehaviour
             if(hit.collider.name == "White_Wire")
             {
                isWhite = true;
-               whiteWire.SetBool("isCut",true); 
+               whiteWire.SetBool("isCut",true);
+                cutSound.Play();             
             }
-
-        }
+        }        
     }
 }

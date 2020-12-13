@@ -20,8 +20,9 @@ public class HitController : MonoBehaviour
     void Update()
     {
         
-    }    
+    }
 
+    
     public void hitButton()
     {
         if(line.isArea)
@@ -29,6 +30,8 @@ public class HitController : MonoBehaviour
             Debug.Log("pass");
             SceneManager.LoadScene(15);
             timer.timerIsRunning = false;
-        }    
+            timer.timeRemaining += 5;
+        }
+        
     }
 }

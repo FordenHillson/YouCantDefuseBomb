@@ -8,6 +8,7 @@ public class ButtonController : MonoBehaviour
     public BlueButton blueButton;
     public GreenButton greenButton;
     public OrangeButton orangeButton;
+    public bool wireTrick = false;
     
     [Header("result : ")]
     public int resultButton;
