@@ -20,7 +20,7 @@ public class RandomSceneIngameNormal : MonoBehaviour
 
     void Update()
     {
-        if(button.score == 4)
+        if(button.score == 5)
         {
             SceneManager.LoadScene(15);
             timer.timeRemaining += 5;

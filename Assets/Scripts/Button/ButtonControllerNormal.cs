@@ -23,8 +23,17 @@ public class ButtonControllerNormal : MonoBehaviour
     public int sizeArray;
     public GameObject[] ButtonArray;
 
+    [Header("Button Sound : ")]
+    public AudioSource corretSound;
+    public AudioSource wrongSound;
+    public bool blueSound;
+    public bool greenSound;
+    public bool orangeSound;
+    public bool lightblueSound;
+    public bool whiteSound;
+    public bool pinkSound;
 
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +43,12 @@ public class ButtonControllerNormal : MonoBehaviour
         lightBlueButton = GameObject.Find("LightBlue_Button").GetComponent<LightBlueButton>();
         whiteButton = GameObject.Find("White_Button").GetComponent<WhiteButton>();
         pinkButton = GameObject.Find("Pink_Button").GetComponent<PinkButton>();
+        blueSound = false;
+        greenSound = false;
+        orangeSound = false;
+        lightblueSound = false;
+        whiteSound = false;
+        pinkSound = false;
 
         randomController();
         
@@ -59,14 +74,23 @@ public class ButtonControllerNormal : MonoBehaviour
         {
             if(blueButton.blueValue == resultButton)
             {
-                Debug.Log("Boom");                                            
+                Debug.Log("Boom");
+                if (!blueSound)
+                {
+                    wrongSound.Play();
+                    blueSound = true;
+                }
             }
             else
             {
                 Debug.Log("Ok");
                 score ++;
                 blueButton.isBlue = false;
-                                               
+                if (!blueSound)
+                {
+                    corretSound.Play();
+                    blueSound = true;
+                }
             }            
         }
 
@@ -75,13 +99,22 @@ public class ButtonControllerNormal : MonoBehaviour
             if(greenButton.greenValue == resultButton)
             {
                 Debug.Log("Boom");
-                
+                if (!greenSound)
+                {
+                    wrongSound.Play();
+                    greenSound = true;
+                }
             }
             else
             {
                 Debug.Log("Ok");
                 score ++;
                 greenButton.isGreen = false;
+                if (!greenSound)
+                {
+                    corretSound.Play();
+                    greenSound = true;
+                }
             }
         }
 
@@ -90,13 +123,22 @@ public class ButtonControllerNormal : MonoBehaviour
             if(orangeButton.orangeValue == resultButton)
             {
                 Debug.Log("Boom");
-                
+                if (!orangeSound)
+                {
+                    wrongSound.Play();
+                    orangeSound = true;
+                }
             }
             else
             {
                 Debug.Log("Ok");
                 score++;
                 orangeButton.isOrange = false;
+                if (!orangeSound)
+                {
+                    corretSound.Play();
+                    orangeSound = true;
+                }
             }
         }
 
@@ -105,13 +147,22 @@ public class ButtonControllerNormal : MonoBehaviour
             if(lightBlueButton.lightBlueValue == resultButton)
             {
                 Debug.Log("Boom");
-                
+                if(!lightblueSound)
+                {
+                    wrongSound.Play();
+                    lightblueSound = true;
+                }
             }
             else
             {
                 Debug.Log("Ok");
                 score++;
                 lightBlueButton.isLightBlue = false;
+                if(!lightblueSound)
+                {
+                    corretSound.Play();
+                    lightblueSound = true;
+                }
             }
         }
 
@@ -120,13 +171,22 @@ public class ButtonControllerNormal : MonoBehaviour
             if(whiteButton.whiteValue == resultButton)
             {
                 Debug.Log("Boom");
-                
+                if (!whiteSound)
+                {
+                    wrongSound.Play();
+                    whiteSound = true;
+                }
             }
             else
             {
                 Debug.Log("Ok");
                 score++;
                 whiteButton.isWhite = false;
+                if (!whiteSound)
+                {
+                    corretSound.Play();
+                    whiteSound = true;
+                }
             }
         }
 
@@ -134,13 +194,23 @@ public class ButtonControllerNormal : MonoBehaviour
         {
             if(pinkButton.PinkValue == resultButton)
             {
-                Debug.Log("Boom");                
+                Debug.Log("Boom");
+                if (!pinkSound)
+                {
+                    wrongSound.Play();
+                    pinkSound = true;
+                }
             }
             else
             {
                 Debug.Log("Ok");
                 score++;
                 pinkButton.isPink = false;
+                if (!pinkSound)
+                {
+                    corretSound.Play();
+                    pinkSound = true;
+                }
             }            
         }              
              
