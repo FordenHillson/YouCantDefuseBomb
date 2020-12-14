@@ -112,7 +112,11 @@ public class ButtonController : MonoBehaviour
             if(orangeButton.orangeValue == resultButton)
             {
                 Debug.Log("Boom");
-                
+                if (!orangeSound)
+                {
+                    wrongSound.Play();
+                    orangeSound = true;
+                }
             }
             else
             {
