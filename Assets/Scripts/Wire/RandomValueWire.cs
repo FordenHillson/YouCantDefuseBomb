@@ -49,8 +49,8 @@ public class RandomValueWire : MonoBehaviour
         countScene = GameObject.Find("CountScene").GetComponent<CountScene>();
         randomSceneIngame = GameObject.Find("RndScene 1").GetComponent<RandomSceneIngame>();
         timer = GameObject.Find("Timer").GetComponent<TimerContoller>();
-        corretSound = GetComponent<AudioSource>();
-        wrongSound = GetComponent<AudioSource>();
+        corretSound = GameObject.Find("CorretSound").GetComponent<AudioSource>();
+        wrongSound = GameObject.Find("WrongSound").GetComponent<AudioSource>();
 
         yellowSound = false;
         blueSound = false;
@@ -75,7 +75,7 @@ public class RandomValueWire : MonoBehaviour
                     yellowSound = true;
                 }
             }
-            else
+            if(yellowWire.YellowValue != resultWire)
             {
                 Debug.Log("No");
                 if (!yellowSound)
@@ -94,7 +94,6 @@ public class RandomValueWire : MonoBehaviour
             if (blueWire.BlueValue == resultWire)
             {
                 Debug.Log("Yes!");
-
                 randomSceneIngame.isWire1 = true;
                 if (!blueSound)
                 {
@@ -102,7 +101,7 @@ public class RandomValueWire : MonoBehaviour
                     blueSound = true;
                 }
             }
-            else
+            if (blueWire.BlueValue != resultWire)
             {
                 Debug.Log("No");
                 if (!blueSound)
@@ -120,7 +119,6 @@ public class RandomValueWire : MonoBehaviour
             if (redWire.RedValue == resultWire)
             {
                 Debug.Log("Yes!");
-
                 randomSceneIngame.isWire1 = true;
                 if (!redSound)
                 {
@@ -128,7 +126,7 @@ public class RandomValueWire : MonoBehaviour
                     redSound = true;
                 }
             }
-            else
+            if(redWire.RedValue != resultWire)
             {
                 Debug.Log("No");
                 if (!redSound)
@@ -151,15 +149,15 @@ public class RandomValueWire : MonoBehaviour
                 {
                     corretSound.Play();
                     whiteSound = true;
-                }
-                else
+                }                
+            }
+            if (whiteWire.WhiteValue != resultWire)
+            {
+                Debug.Log("No");
+                if (!whiteSound)
                 {
-                    Debug.Log("No");
-                    if (!whiteSound)
-                    {
-                        wrongSound.Play();
-                        whiteSound = true;
-                    }
+                    wrongSound.Play();
+                    whiteSound = true;
                 }
             }
         }

@@ -68,18 +68,19 @@ public class ButtonControllerHard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        checkResult(); 
+        checkResult();
+        if (resultButton2 == resultButton)
+        {
+            resultButton2 = Random.Range(1, sizeArray += 1);
+        }
     }
 
     void randomController()
     {
         sizeArray = ButtonArray.Length;
-        resultButton = Random.Range(1,sizeArray);
-        resultButton2 = Random.Range(1,sizeArray);
-        if(resultButton2 == resultButton)
-        {
-            resultButton2 = Random.Range(1,sizeArray);
-        }
+        resultButton = Random.Range(1,sizeArray += 1);
+        resultButton2 = Random.Range(1,sizeArray += 1 );
+        
         Debug.Log("Button1 is : "+resultButton);
         Debug.Log("Button2 is : "+resultButton2);
     }

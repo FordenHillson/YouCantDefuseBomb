@@ -52,7 +52,7 @@ public class ButtonController : MonoBehaviour
     void randomController()
     {
         sizeArray = ButtonArray.Length;
-        resultButton = Random.Range(1,sizeArray);
+        resultButton = Random.Range(1,sizeArray += 1);
         Debug.Log("Button is : "+resultButton);
     }
 

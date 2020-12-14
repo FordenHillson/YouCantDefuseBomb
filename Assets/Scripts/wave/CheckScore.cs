@@ -31,8 +31,8 @@ public class CheckScore : MonoBehaviour
         waveAns2 = GameObject.Find("Wave_Answer2").GetComponent<waveAns2ControllerHard>();
         timer = GameObject.Find("Timer").GetComponent<TimerContoller>();
         timer.timerIsRunning = true;
-        corretSound = GetComponent<AudioSource>();
-        wrongSound = GetComponent<AudioSource>();
+        corretSound = GameObject.Find("CorretSound").GetComponent<AudioSource>();
+        wrongSound = GameObject.Find("WrongSound").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame

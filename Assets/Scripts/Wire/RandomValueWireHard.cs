@@ -26,13 +26,9 @@ public class RandomValueWireHard : MonoBehaviour
 
     void Awake()
     {
-        resultWire = Random.Range(1, 4);
-        resultWire2 = Random.Range(1, 4);
-        if (resultWire2 == resultWire)
-        {
-            resultWire2 = Random.Range(1, 4);
-            Debug.Log("Wire 2 is : " + resultWire2);
-        }
+        resultWire = Random.Range(1, 5);
+        resultWire2 = Random.Range(1, 5);
+        
     }
     // Start is called before the first frame update
     void Start()
@@ -43,8 +39,8 @@ public class RandomValueWireHard : MonoBehaviour
         whiteWire = GameObject.Find("White_Wire").GetComponent<WhiteWire>();
         countScene = GameObject.Find("CountScene").GetComponent<CountScene>();
         randomSceneIngameHard = GameObject.Find("RndScene").GetComponent<RandomSceneIngameHard>();
-        corretSound = GetComponent<AudioSource>();
-        wrongSound = GetComponent<AudioSource>();
+        corretSound = GameObject.Find("CorretSound").GetComponent<AudioSource>();
+        wrongSound = GameObject.Find("WrongSound").GetComponent<AudioSource>();
 
         yellowSound = false;
         blueSound = false;
@@ -55,15 +51,20 @@ public class RandomValueWireHard : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {        
+    {
+        if (resultWire2 == resultWire)
+        {
+            resultWire2 = Random.Range(1, 4);
+            Debug.Log("Wire 2 is : " + resultWire2);
+        }
 
-       if(yellowWire.isYellow)
+        if (yellowWire.isYellow)
        {
            
            if(yellowWire.YellowValue == resultWire)
            {              
                 Debug.Log("Yes!");    
-                randomSceneIngameHard.isWire1 = true;                
+                randomSceneIngameHard.isWire1 = true;               
            }
            else
            {
@@ -88,25 +89,24 @@ public class RandomValueWireHard : MonoBehaviour
                     yellowSound = true;
                 }
            }
-
-            if (yellowWire.YellowValue != resultWire && yellowWire.YellowValue == resultWire2)
-            {
+           else if (yellowWire.YellowValue != resultWire && yellowWire.YellowValue == resultWire2)
+           {
                 if (!yellowSound)
                 {
                     corretSound.Play();
                     yellowSound = true;
                 }
-            }
+           }
 
-            if (yellowWire.YellowValue != resultWire && yellowWire.YellowValue != resultWire2)
-            {
+           if (yellowWire.YellowValue != resultWire && yellowWire.YellowValue != resultWire2)
+           {
                 if (!yellowSound)
                 {
                    wrongSound.Play();
                    yellowSound = true;
                     
                 }
-            }
+           }
 
        }
 
@@ -143,16 +143,16 @@ public class RandomValueWireHard : MonoBehaviour
                }
            }
 
-            if (blueWire.BlueValue != resultWire && blueWire.BlueValue == resultWire2)
-            {
+           else if (blueWire.BlueValue != resultWire && blueWire.BlueValue == resultWire2)
+           {
                 if (!blueSound)
                 {
                     corretSound.Play();
                     blueSound = true;
                 }
-            }
+           }
 
-            if (blueWire.BlueValue != resultWire && blueWire.BlueValue != resultWire2)
+           if (blueWire.BlueValue != resultWire && blueWire.BlueValue != resultWire2)
            {
                if (!blueSound)
                {
@@ -194,7 +194,7 @@ public class RandomValueWireHard : MonoBehaviour
                 }
             }
 
-            if (redWire.RedValue != resultWire && redWire.RedValue == resultWire2)
+            else if (redWire.RedValue != resultWire && redWire.RedValue == resultWire2)
             {
                 if (!redSound)
                 {
@@ -230,8 +230,7 @@ public class RandomValueWireHard : MonoBehaviour
            if(whiteWire.WhiteValue == resultWire2)
            {              
                Debug.Log("Yes!");             
-               randomSceneIngameHard.isWire2 = true;
-               
+               randomSceneIngameHard.isWire2 = true;               
            }
            else
            {
@@ -247,7 +246,7 @@ public class RandomValueWireHard : MonoBehaviour
                 }
             }
 
-            if (whiteWire.WhiteValue != resultWire && whiteWire.WhiteValue == resultWire2)
+            else if (whiteWire.WhiteValue != resultWire && whiteWire.WhiteValue == resultWire2)
             {
                 if (!redSound)
                 {
