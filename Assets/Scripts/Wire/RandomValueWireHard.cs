@@ -89,15 +89,24 @@ public class RandomValueWireHard : MonoBehaviour
                 }
            }
 
-           if(yellowWire.YellowValue != resultWire && yellowWire.YellowValue != resultWire2)
-           {
+            if (yellowWire.YellowValue != resultWire && yellowWire.YellowValue == resultWire2)
+            {
+                if (!yellowSound)
+                {
+                    corretSound.Play();
+                    yellowSound = true;
+                }
+            }
+
+            if (yellowWire.YellowValue != resultWire && yellowWire.YellowValue != resultWire2)
+            {
                 if (!yellowSound)
                 {
                    wrongSound.Play();
                    yellowSound = true;
                     
                 }
-           }
+            }
 
        }
 
@@ -134,7 +143,16 @@ public class RandomValueWireHard : MonoBehaviour
                }
            }
 
-           if (blueWire.BlueValue != resultWire && blueWire.BlueValue != resultWire2)
+            if (blueWire.BlueValue != resultWire && blueWire.BlueValue == resultWire2)
+            {
+                if (!blueSound)
+                {
+                    corretSound.Play();
+                    blueSound = true;
+                }
+            }
+
+            if (blueWire.BlueValue != resultWire && blueWire.BlueValue != resultWire2)
            {
                if (!blueSound)
                {
@@ -176,6 +194,15 @@ public class RandomValueWireHard : MonoBehaviour
                 }
             }
 
+            if (redWire.RedValue != resultWire && redWire.RedValue == resultWire2)
+            {
+                if (!redSound)
+                {
+                    corretSound.Play();
+                    redSound = true;
+                }
+            }
+
             if (redWire.RedValue != resultWire && redWire.RedValue != resultWire2)
             {
                 if (!redSound)
@@ -192,44 +219,35 @@ public class RandomValueWireHard : MonoBehaviour
            if(whiteWire.WhiteValue == resultWire)
            {              
                Debug.Log("Yes!");            
-               randomSceneIngameHard.isWire1 = true;
-                if (!whiteSound)
-                {
-                    corretSound.Play();
-                    whiteSound = true;
-                }
-            }
+               randomSceneIngameHard.isWire1 = true;               
+           }
            else
            {
                Debug.Log("No");
-                if (!whiteSound)
-                {
-                    wrongSound.Play();
-                    whiteSound = true;
-                }
-            }
+                
+           }
 
            if(whiteWire.WhiteValue == resultWire2)
            {              
                Debug.Log("Yes!");             
                randomSceneIngameHard.isWire2 = true;
-                if (!whiteSound)
-                {
-                    corretSound.Play();
-                    whiteSound = true;
-                }
-            }
+               
+           }
            else
            {
-               Debug.Log("No");
-                if (!whiteSound)
-                {
-                    wrongSound.Play();
-                    whiteSound = true;
-                }
+               Debug.Log("No");                
            }
 
             if (whiteWire.WhiteValue == resultWire && whiteWire.WhiteValue != resultWire2)
+            {
+                if (!redSound)
+                {
+                    corretSound.Play();
+                    redSound = true;
+                }
+            }
+
+            if (whiteWire.WhiteValue != resultWire && whiteWire.WhiteValue == resultWire2)
             {
                 if (!redSound)
                 {
