@@ -8,7 +8,7 @@ public class ButtonController : MonoBehaviour
     public BlueButton blueButton;
     public GreenButton greenButton;
     public OrangeButton orangeButton;
-    public bool wireTrick = false;
+    
     
     [Header("result : ")]
     public int resultButton;
@@ -21,14 +21,22 @@ public class ButtonController : MonoBehaviour
     public int sizeArray;
     public GameObject[] ButtonArray;
 
+    [Header("Button Sound : ")]
+    public AudioSource corretSound;
+    public AudioSource wrongSound;
+    public bool blueSound;
+    public bool greenSound;
+    public bool orangeSound;
 
-    
     // Start is called before the first frame update
     void Start()
     {
         blueButton = GameObject.Find("Blue_Button").GetComponent<BlueButton>();
         greenButton = GameObject.Find("Green_Button").GetComponent<GreenButton>();
         orangeButton = GameObject.Find("Orange_Button").GetComponent<OrangeButton>();
+        blueSound = false;
+        greenSound = false;
+        orangeSound = false;
 
         randomController();
         
@@ -54,15 +62,25 @@ public class ButtonController : MonoBehaviour
         {
             if(blueButton.blueValue == resultButton)
             {
-                Debug.Log("Boom");                                            
+                Debug.Log("Boom");
+                if(!blueSound)
+                {
+                    wrongSound.Play();
+                    blueSound = true;
+                }
             }
             else
             {
                 Debug.Log("Ok");
                 score ++;
                 blueButton.isBlue = false;
-                                               
-            }            
+                if(!blueSound)
+                {
+                    corretSound.Play();
+                    blueSound = true;
+                }
+            }           
+            
         }
 
         if(greenButton.isGreen)
@@ -70,13 +88,22 @@ public class ButtonController : MonoBehaviour
             if(greenButton.greenValue == resultButton)
             {
                 Debug.Log("Boom");
-                
+                if (!greenSound)
+                {
+                    wrongSound.Play();
+                    greenSound = true;
+                }
             }
             else
             {
                 Debug.Log("Ok");
                 score ++;
                 greenButton.isGreen = false;
+                if (!greenSound)
+                {
+                    corretSound.Play();
+                    greenSound = true;
+                }
             }
         }
 
@@ -92,6 +119,11 @@ public class ButtonController : MonoBehaviour
                 Debug.Log("Ok");
                 score++;
                 orangeButton.isOrange = false;
+                if (!orangeSound)
+                {
+                    corretSound.Play();
+                    orangeSound = true;
+                }
             }
         }    
         
