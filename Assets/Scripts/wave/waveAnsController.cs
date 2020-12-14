@@ -10,6 +10,9 @@ public class waveAnsController : MonoBehaviour
     public float waveAnsValue;
     public Animator waveAnsAnim;
     public int waveAns;
+    public AudioSource corretSound;
+    public AudioSource wrongSound;
+
 
     public TimerContoller timer;
 
@@ -20,6 +23,8 @@ public class waveAnsController : MonoBehaviour
         waveAnsAnim = GetComponent<Animator>();
         timer = GameObject.Find("Timer").GetComponent<TimerContoller>();
         timer.timerIsRunning = true;
+        corretSound = GetComponent<AudioSource>();
+        wrongSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -51,6 +56,11 @@ public class waveAnsController : MonoBehaviour
             SceneManager.LoadScene(15);
             timer.timerIsRunning = false;
             timer.timeRemaining += 5;
+            corretSound.Play();
+        }
+        else
+        {
+            wrongSound.Play();
         }
         
     }

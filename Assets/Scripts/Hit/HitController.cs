@@ -7,6 +7,8 @@ public class HitController : MonoBehaviour
 {
     public lineMove line;
     public TimerContoller timer;
+    public AudioSource corretSound;
+    public AudioSource wrongSound;
 
     // Start is called before the first frame update
     void Start()
@@ -14,6 +16,8 @@ public class HitController : MonoBehaviour
         line = GameObject.Find("Line").GetComponent<lineMove>();
         timer = GameObject.Find("Timer").GetComponent<TimerContoller>();
         timer.timerIsRunning = true;
+        corretSound = GetComponent<AudioSource>();
+        wrongSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -31,7 +35,13 @@ public class HitController : MonoBehaviour
             SceneManager.LoadScene(15);
             timer.timerIsRunning = false;
             timer.timeRemaining += 5;
+            corretSound.Play();
         }
-        
+        else
+        {
+            Debug.Log("wave 1 is incorret");
+            wrongSound.Play();
+        }
+
     }
 }

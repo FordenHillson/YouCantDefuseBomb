@@ -27,6 +27,19 @@ public class ButtonControllerHard : MonoBehaviour
     [Header("Array : ")]
     public int sizeArray;
     public GameObject[] ButtonArray;
+
+    [Header("Button Sound : ")]
+    public AudioSource corretSound;
+    public AudioSource wrongSound;
+    public bool blueSound;
+    public bool greenSound;
+    public bool orangeSound;
+    public bool lightblueSound;
+    public bool whiteSound;
+    public bool pinkSound;
+    public bool lightGreenSound;
+    public bool purpleSound;
+    public bool yellowSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +52,15 @@ public class ButtonControllerHard : MonoBehaviour
         lightGreenButton = GameObject.Find("LightGreen2_Button").GetComponent<LightGreen_2Button>();
         purpleButton = GameObject.Find("Purple_Button").GetComponent<PurpleButton>();
         yellowButton = GameObject.Find("Yellow_Button").GetComponent<YellowButton>();
+        blueSound = false;
+        greenSound = false;
+        orangeSound = false;
+        lightblueSound = false;
+        whiteSound = false;
+        pinkSound = false;
+        lightGreenSound = false;
+        purpleSound = false;
+        yellowSound = false;
 
         randomController();
     }
@@ -74,7 +96,7 @@ public class ButtonControllerHard : MonoBehaviour
             {
                 Debug.Log("Ok");
                 score ++;
-                blueButton.isBlue = false;                                               
+                blueButton.isBlue = false;                
             }
             
             if(blueButton.blueValue == resultButton2)
@@ -85,15 +107,35 @@ public class ButtonControllerHard : MonoBehaviour
             {
                 Debug.Log("Ok");
                 score ++;
-                blueButton.isBlue = false;                                               
+                blueButton.isBlue = false;                
             }
 
             if(blueButton.blueValue == resultButton && blueButton.blueValue != resultButton2)
             {
                 score --;
-            }else if(blueButton.blueValue != resultButton && blueButton.blueValue == resultButton2)
+                if (!blueSound)
+                {
+                    wrongSound.Play();
+                    blueSound = true;
+                }
+            }
+            else if(blueButton.blueValue != resultButton && blueButton.blueValue == resultButton2)
             {
                 score --;
+                if (!blueSound)
+                {
+                    wrongSound.Play();
+                    blueSound = true;
+                }
+            }
+
+            if(blueButton.blueValue != resultButton && blueButton.blueValue != resultButton2)
+            {
+                if (!blueSound)
+                {
+                    corretSound.Play();
+                    blueSound = true;
+                }
             }
         }
 
@@ -108,6 +150,7 @@ public class ButtonControllerHard : MonoBehaviour
                 Debug.Log("Ok");
                 score ++;
                 greenButton.isGreen = false;
+                
             }
 
             if(greenButton.greenValue == resultButton2)
@@ -119,14 +162,39 @@ public class ButtonControllerHard : MonoBehaviour
                 Debug.Log("Ok");
                 score ++;
                 greenButton.isGreen = false;
+                if (!greenSound)
+                {
+                    corretSound.Play();
+                    greenSound = true;
+                }
             }
 
             if(greenButton.greenValue == resultButton && greenButton.greenValue != resultButton2)
             {
                 score --;
-            }else if(greenButton.greenValue != resultButton && greenButton.greenValue == resultButton2)
+                if (!greenSound)
+                {
+                    wrongSound.Play();
+                    greenSound = true;
+                }
+            }
+            else if(greenButton.greenValue != resultButton && greenButton.greenValue == resultButton2)
             {
                 score --;
+                if (!greenSound)
+                {
+                    wrongSound.Play();
+                    greenSound = true;
+                }
+            }
+
+            if (greenButton.greenValue != resultButton && greenButton.greenValue != resultButton2)
+            {
+                if (!greenSound)
+                {
+                    corretSound.Play();
+                    greenSound = true;
+                }
             }
         }
         
@@ -142,7 +210,7 @@ public class ButtonControllerHard : MonoBehaviour
             {
                 Debug.Log("Ok");
                 score ++;
-                orangeButton.isOrange = false;
+                orangeButton.isOrange = false;                
             }
 
             if(orangeButton.orangeValue == resultButton2)
@@ -154,15 +222,35 @@ public class ButtonControllerHard : MonoBehaviour
             {
                 Debug.Log("Ok");
                 score ++;
-                orangeButton.isOrange = false;
+                orangeButton.isOrange = false;                
             }
 
             if(orangeButton.orangeValue == resultButton && orangeButton.orangeValue != resultButton2)
             {
                 score --;
-            }else if(orangeButton.orangeValue != resultButton && orangeButton.orangeValue == resultButton2)
+                if (!orangeSound)
+                {
+                    wrongSound.Play();
+                    orangeSound = true;
+                }
+            }
+            else if(orangeButton.orangeValue != resultButton && orangeButton.orangeValue == resultButton2)
             {
                 score --;
+                if (!orangeSound)
+                {
+                    wrongSound.Play();
+                    orangeSound = true;
+                }
+            }
+
+            if (orangeButton.orangeValue != resultButton && orangeButton.orangeValue != resultButton2)
+            {
+                if (!orangeSound)
+                {
+                    corretSound.Play();
+                    orangeSound = true;
+                }
             }
         }
 
@@ -171,34 +259,53 @@ public class ButtonControllerHard : MonoBehaviour
         {
             if(lightBlueButton.lightBlueValue == resultButton)
             {
-                Debug.Log("Boom");
-                
+                Debug.Log("Boom");                
             }
             else
             {
                 Debug.Log("Ok");
                 score ++;
-                lightBlueButton.isLightBlue = false;
+                lightBlueButton.isLightBlue = false;                
             }
 
             if(lightBlueButton.lightBlueValue == resultButton2)
             {
-                Debug.Log("Boom");
-                
+                Debug.Log("Boom");                
             }
             else
             {
                 Debug.Log("Ok");
                 score ++;
                 lightBlueButton.isLightBlue = false;
+                
             }
 
             if(lightBlueButton.lightBlueValue == resultButton && lightBlueButton.lightBlueValue != resultButton2)
             {
                 score --;
-            }else if(lightBlueButton.lightBlueValue != resultButton && lightBlueButton.lightBlueValue == resultButton2)
+                if (!lightblueSound)
+                {
+                    wrongSound.Play();
+                    lightblueSound = true;
+                }
+            }
+            else if(lightBlueButton.lightBlueValue != resultButton && lightBlueButton.lightBlueValue == resultButton2)
             {
                 score --;
+                if (!lightblueSound)
+                {
+                    wrongSound.Play();
+                    lightblueSound = true;
+                }
+            }
+
+            if (lightBlueButton.lightBlueValue != resultButton && lightBlueButton.lightBlueValue != resultButton2)
+            {
+                if (!lightblueSound)
+                {
+                    corretSound.Play();
+                    lightblueSound = true;
+                }
             }
         }
         
@@ -207,14 +314,13 @@ public class ButtonControllerHard : MonoBehaviour
         {
             if(whiteButton.whiteValue == resultButton)
             {
-                Debug.Log("Boom");
-                
+                Debug.Log("Boom");               
             }
             else
             {
                 Debug.Log("Ok");
                 score ++;
-                whiteButton.isWhite = false;
+                whiteButton.isWhite = false;                
             }
 
             if(whiteButton.whiteValue == resultButton2)
@@ -226,15 +332,35 @@ public class ButtonControllerHard : MonoBehaviour
             {
                 Debug.Log("Ok");
                 score ++;
-                whiteButton.isWhite = false;
+                whiteButton.isWhite = false;                
             }
 
             if(whiteButton.whiteValue == resultButton && whiteButton.whiteValue != resultButton2)
             {
                 score --;
-            }else if(whiteButton.whiteValue != resultButton && whiteButton.whiteValue == resultButton2)
+                if (!whiteSound)
+                {
+                    wrongSound.Play();
+                    whiteSound = true;
+                }
+            }
+            else if(whiteButton.whiteValue != resultButton && whiteButton.whiteValue == resultButton2)
             {
                 score --;
+                if (!whiteSound)
+                {
+                    wrongSound.Play();
+                    whiteSound = true;
+                }
+            }
+
+            if (whiteButton.whiteValue != resultButton && whiteButton.whiteValue != resultButton2)
+            {
+                if (!whiteSound)
+                {
+                    corretSound.Play();
+                    whiteSound = true;
+                }
             }
         }  
 
@@ -242,14 +368,13 @@ public class ButtonControllerHard : MonoBehaviour
         {
             if(pinkButton.PinkValue == resultButton)
             {
-                Debug.Log("Boom");
-                
+                Debug.Log("Boom");                
             }
             else
             {
                 Debug.Log("Ok");
                 score ++;
-                pinkButton.isPink = false;
+                pinkButton.isPink = false;               
             }
 
             if(pinkButton.PinkValue == resultButton2)
@@ -260,15 +385,35 @@ public class ButtonControllerHard : MonoBehaviour
             {
                 Debug.Log("Ok");
                 score ++;
-                pinkButton.isPink = false;  
+                pinkButton.isPink = false;                
             }
 
             if(pinkButton.PinkValue == resultButton && pinkButton.PinkValue != resultButton2)
             {
                 score --;
-            }else if(pinkButton.PinkValue != resultButton && pinkButton.PinkValue == resultButton2)
+                if (!pinkSound)
+                {
+                    wrongSound.Play();
+                    pinkSound = true;
+                }
+            }
+            else if(pinkButton.PinkValue != resultButton && pinkButton.PinkValue == resultButton2)
             {
                 score --;
+                if (!pinkSound)
+                {
+                    wrongSound.Play();
+                    pinkSound = true;
+                }
+            }
+
+            if (pinkButton.PinkValue != resultButton && pinkButton.PinkValue != resultButton2)
+            {
+                if (!pinkSound)
+                {
+                    corretSound.Play();
+                    pinkSound = true;
+                }
             }
         }
 
@@ -276,34 +421,52 @@ public class ButtonControllerHard : MonoBehaviour
         {
             if(lightGreenButton.LightGreenValue == resultButton)
             {
-                Debug.Log("Boom");
-                
+                Debug.Log("Boom");                
             }
             else
             {
                 Debug.Log("Ok");
                 score ++;
-                lightGreenButton.isLightGreen = false;
+                lightGreenButton.isLightGreen = false;                
             }
 
             if(lightGreenButton.LightGreenValue == resultButton2)
             {
-                Debug.Log("Boom");
-                
+                Debug.Log("Boom");                
             }
             else
             {
                 Debug.Log("Ok");
                 score ++;
-                lightGreenButton.isLightGreen = false;  
+                lightGreenButton.isLightGreen = false;                
             }
 
             if(lightGreenButton.LightGreenValue == resultButton && lightGreenButton.LightGreenValue != resultButton2)
             {
                 score --;
-            }else if(lightGreenButton.LightGreenValue != resultButton && lightGreenButton.LightGreenValue == resultButton2)
+                if (!lightGreenSound)
+                {
+                    wrongSound.Play();
+                    lightGreenSound = true;
+                }
+            }
+            else if(lightGreenButton.LightGreenValue != resultButton && lightGreenButton.LightGreenValue == resultButton2)
             {
                 score --;
+                if (!lightGreenSound)
+                {
+                    wrongSound.Play();
+                    lightGreenSound = true;
+                }
+            }
+
+            if (lightGreenButton.LightGreenValue != resultButton && lightGreenButton.LightGreenValue != resultButton2)
+            {
+                if (!lightGreenSound)
+                {
+                    corretSound.Play();
+                    lightGreenSound = true;
+                }
             }
         }
         
@@ -311,14 +474,13 @@ public class ButtonControllerHard : MonoBehaviour
         {
             if(purpleButton.PurpleValue == resultButton)
             {
-                Debug.Log("Boom");
-                
+                Debug.Log("Boom");                
             }
             else
             {
                 Debug.Log("Ok");
                 score ++;
-                purpleButton.isPurple = false;
+                purpleButton.isPurple = false;                
             }
 
             if(purpleButton.PurpleValue == resultButton2)
@@ -330,15 +492,35 @@ public class ButtonControllerHard : MonoBehaviour
             {
                 Debug.Log("Ok");
                 score ++;
-                purpleButton.isPurple = false;  
+                purpleButton.isPurple = false;                
             }
 
             if(purpleButton.PurpleValue == resultButton && purpleButton.PurpleValue != resultButton2)
             {
                 score --;
-            }else if(purpleButton.PurpleValue != resultButton && purpleButton.PurpleValue == resultButton2)
+                if (!purpleSound)
+                {
+                    wrongSound.Play();
+                    purpleSound = true;
+                }
+            }
+            else if(purpleButton.PurpleValue != resultButton && purpleButton.PurpleValue == resultButton2)
             {
                 score --;
+                if (!purpleSound)
+                {
+                    wrongSound.Play();
+                    purpleSound = true;
+                }
+            }
+
+            if (purpleButton.PurpleValue != resultButton && purpleButton.PurpleValue != resultButton2)
+            {
+                if (!purpleSound)
+                {
+                    corretSound.Play();
+                    purpleSound = true;
+                }
             }
         }
 
@@ -346,34 +528,52 @@ public class ButtonControllerHard : MonoBehaviour
         {
             if(yellowButton.YellowValue == resultButton)
             {
-                Debug.Log("Boom");
-                
+                Debug.Log("Boom");                
             }
             else
             {
                 Debug.Log("Ok");
                 score ++;
-                yellowButton.isYellow = false;
+                yellowButton.isYellow = false;                
             }
 
             if(yellowButton.YellowValue == resultButton2)
             {
-                Debug.Log("Boom");
-                
+                Debug.Log("Boom");                
             }
             else
             {
                 Debug.Log("Ok");
                 score ++;
-                yellowButton.isYellow = false;  
+                yellowButton.isYellow = false;                
             }
 
             if(yellowButton.YellowValue == resultButton && yellowButton.YellowValue != resultButton2)
             {
                 score --;
-            }else if(yellowButton.YellowValue != resultButton && yellowButton.YellowValue == resultButton2)
+                if (!yellowSound)
+                {
+                    wrongSound.Play();
+                    yellowSound = true;
+                }
+            }
+            else if(yellowButton.YellowValue != resultButton && yellowButton.YellowValue == resultButton2)
             {
                 score --;
+                if (!yellowSound)
+                {
+                    wrongSound.Play();
+                    yellowSound = true;
+                }
+            }
+
+            if (yellowButton.YellowValue != resultButton && yellowButton.YellowValue != resultButton2)
+            {
+                if (!yellowSound)
+                {
+                    corretSound.Play();
+                    yellowSound = true;
+                }
             }
         }             
              
