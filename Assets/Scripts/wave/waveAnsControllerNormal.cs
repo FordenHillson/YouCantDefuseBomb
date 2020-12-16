@@ -63,13 +63,14 @@ public class waveAnsControllerNormal : MonoBehaviour
         if (waveAns == waveControllerNormal.resultWave)
         {
             SceneManager.LoadScene(15);
-            timer.timeRemaining += 3;
+            timer.timeRemaining += 5;
             timer.timerIsRunning = false;
             corretSound.Play();
         }
         else
         {
             wrongSound.Play();
+            timer.timeRemaining -= 5;
         }
     }
 

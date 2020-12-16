@@ -61,6 +61,7 @@ public class waveAnsController : MonoBehaviour
         else
         {
             wrongSound.Play();
+            timer.timeRemaining -= 5;
         }
         
     }

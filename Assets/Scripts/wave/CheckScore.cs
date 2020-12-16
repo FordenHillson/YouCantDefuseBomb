@@ -42,7 +42,7 @@ public class CheckScore : MonoBehaviour
         {
             Debug.Log("Pass !");
             SceneManager.LoadScene(15);
-            timer.timeRemaining += 5;            
+            timer.timeRemaining += 8;            
             timer.timerIsRunning = false;
         }
     }
@@ -59,6 +59,7 @@ public class CheckScore : MonoBehaviour
         {
             Debug.Log("wave 1 is incorret");
             wrongSound.Play();
+            timer.timeRemaining -= 10;
         }        
     }
     public void CheckWave2()
@@ -73,6 +74,7 @@ public class CheckScore : MonoBehaviour
         {
             Debug.Log("wave 2 is incorret");
             wrongSound.Play();
+            timer.timeRemaining -= 10;
         }
     }
 
