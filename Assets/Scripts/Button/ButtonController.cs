@@ -8,8 +8,14 @@ public class ButtonController : MonoBehaviour
     public BlueButton blueButton;
     public GreenButton greenButton;
     public OrangeButton orangeButton;
-    
-    
+    public bool isBlueWrong;
+    public bool isGreenWrong;
+    public bool isOrangeWrong;
+
+    [Header("Timer : ")]
+    public TimerContoller timer;
+
+
     [Header("result : ")]
     public int resultButton;
 
@@ -34,6 +40,7 @@ public class ButtonController : MonoBehaviour
         blueButton = GameObject.Find("Blue_Button").GetComponent<BlueButton>();
         greenButton = GameObject.Find("Green_Button").GetComponent<GreenButton>();
         orangeButton = GameObject.Find("Orange_Button").GetComponent<OrangeButton>();
+        timer = GameObject.Find("Timer").GetComponent<TimerContoller>();
         blueSound = false;
         greenSound = false;
         orangeSound = false;
@@ -68,6 +75,11 @@ public class ButtonController : MonoBehaviour
                     wrongSound.Play();
                     blueSound = true;
                 }
+                if(!isBlueWrong)
+                {
+                    timer.timeRemaining -= 5;
+                    isBlueWrong = true;
+                }
             }
             else
             {
@@ -93,6 +105,11 @@ public class ButtonController : MonoBehaviour
                     wrongSound.Play();
                     greenSound = true;
                 }
+                if(!isGreenWrong)
+                {
+                    timer.timeRemaining -= 5;
+                    isGreenWrong = true;
+                }
             }
             else
             {
@@ -116,6 +133,11 @@ public class ButtonController : MonoBehaviour
                 {
                     wrongSound.Play();
                     orangeSound = true;
+                }
+                if(!isOrangeWrong)
+                {
+                    timer.timeRemaining -= 5;
+                    isOrangeWrong = true;
                 }
             }
             else

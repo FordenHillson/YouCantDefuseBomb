@@ -11,7 +11,16 @@ public class ButtonControllerNormal : MonoBehaviour
     public LightBlueButton lightBlueButton;
     public WhiteButton whiteButton;
     public PinkButton pinkButton;
-    
+    public bool isBlueWrong;
+    public bool isGreenWrong;
+    public bool isOrangeWrong;
+    public bool isLightblueWrong;
+    public bool isWhiteWrong;
+    public bool isPinkWrong;
+
+    [Header("Timer : ")]
+    public TimerContoller timer;
+
     [Header("result : ")]
     public int resultButton;
 
@@ -43,6 +52,7 @@ public class ButtonControllerNormal : MonoBehaviour
         lightBlueButton = GameObject.Find("LightBlue_Button").GetComponent<LightBlueButton>();
         whiteButton = GameObject.Find("White_Button").GetComponent<WhiteButton>();
         pinkButton = GameObject.Find("Pink_Button").GetComponent<PinkButton>();
+        timer = GameObject.Find("Timer").GetComponent<TimerContoller>();
         blueSound = false;
         greenSound = false;
         orangeSound = false;
@@ -80,6 +90,11 @@ public class ButtonControllerNormal : MonoBehaviour
                     wrongSound.Play();
                     blueSound = true;
                 }
+                if(!isBlueWrong)
+                {
+                    timer.timeRemaining -= 5;
+                    isBlueWrong = true;
+                }
             }
             else
             {
@@ -103,6 +118,11 @@ public class ButtonControllerNormal : MonoBehaviour
                 {
                     wrongSound.Play();
                     greenSound = true;
+                }
+                if(!isGreenWrong)
+                {
+                    timer.timeRemaining -= 5;
+                    isGreenWrong = true;
                 }
             }
             else
@@ -128,6 +148,11 @@ public class ButtonControllerNormal : MonoBehaviour
                     wrongSound.Play();
                     orangeSound = true;
                 }
+                if(!isOrangeWrong)
+                {
+                    timer.timeRemaining -= 5;
+                    isOrangeWrong = true;
+                }
             }
             else
             {
@@ -151,6 +176,11 @@ public class ButtonControllerNormal : MonoBehaviour
                 {
                     wrongSound.Play();
                     lightblueSound = true;
+                }
+                if(!isLightblueWrong)
+                {
+                    timer.timeRemaining -= 5;
+                    isLightblueWrong = true;
                 }
             }
             else
@@ -176,6 +206,11 @@ public class ButtonControllerNormal : MonoBehaviour
                     wrongSound.Play();
                     whiteSound = true;
                 }
+                if(!isWhiteWrong)
+                {
+                    timer.timeRemaining -= 5;
+                    isWhiteWrong = true;
+                }
             }
             else
             {
@@ -199,6 +234,11 @@ public class ButtonControllerNormal : MonoBehaviour
                 {
                     wrongSound.Play();
                     pinkSound = true;
+                }
+                if(!isPinkWrong)
+                {
+                    timer.timeRemaining -= 5;
+                    isPinkWrong = true;
                 }
             }
             else

@@ -14,6 +14,18 @@ public class ButtonControllerHard : MonoBehaviour
     public LightGreen_2Button lightGreenButton;
     public PurpleButton purpleButton;
     public YellowButton yellowButton;
+    public bool isBlueWrong;
+    public bool isGreenWrong;
+    public bool isOrangeWrong;
+    public bool isLightblueWrong;
+    public bool isWhiteWrong;
+    public bool isPinkWrong;
+    public bool isLightgreenWrong;
+    public bool isPurpleWrong;
+    public bool isYellowWrong;
+
+    [Header("Timer : ")]
+    public TimerContoller timer;
 
     [Header("result : ")]
     public int resultButton;
@@ -52,6 +64,7 @@ public class ButtonControllerHard : MonoBehaviour
         lightGreenButton = GameObject.Find("LightGreen2_Button").GetComponent<LightGreen_2Button>();
         purpleButton = GameObject.Find("Purple_Button").GetComponent<PurpleButton>();
         yellowButton = GameObject.Find("Yellow_Button").GetComponent<YellowButton>();
+        timer = GameObject.Find("Timer").GetComponent<TimerContoller>();
         blueSound = false;
         greenSound = false;
         orangeSound = false;
@@ -119,6 +132,11 @@ public class ButtonControllerHard : MonoBehaviour
                     wrongSound.Play();
                     blueSound = true;
                 }
+                if (!isBlueWrong)
+                {
+                    timer.timeRemaining -= 10;
+                    isBlueWrong = true;
+                }
             }
             else if(blueButton.blueValue != resultButton && blueButton.blueValue == resultButton2)
             {
@@ -127,6 +145,11 @@ public class ButtonControllerHard : MonoBehaviour
                 {
                     wrongSound.Play();
                     blueSound = true;
+                }
+                if (!isBlueWrong)
+                {
+                    timer.timeRemaining -= 10;
+                    isBlueWrong = true;
                 }
             }
 
@@ -178,6 +201,11 @@ public class ButtonControllerHard : MonoBehaviour
                     wrongSound.Play();
                     greenSound = true;
                 }
+                if (!isGreenWrong)
+                {
+                    timer.timeRemaining -= 10;
+                    isGreenWrong = true;
+                }
             }
             else if(greenButton.greenValue != resultButton && greenButton.greenValue == resultButton2)
             {
@@ -186,6 +214,11 @@ public class ButtonControllerHard : MonoBehaviour
                 {
                     wrongSound.Play();
                     greenSound = true;
+                }
+                if (!isGreenWrong)
+                {
+                    timer.timeRemaining -= 10;
+                    isGreenWrong = true;
                 }
             }
 
@@ -234,6 +267,11 @@ public class ButtonControllerHard : MonoBehaviour
                     wrongSound.Play();
                     orangeSound = true;
                 }
+                if (!isOrangeWrong)
+                {
+                    timer.timeRemaining -= 10;
+                    isOrangeWrong = true;
+                }
             }
             else if(orangeButton.orangeValue != resultButton && orangeButton.orangeValue == resultButton2)
             {
@@ -242,6 +280,11 @@ public class ButtonControllerHard : MonoBehaviour
                 {
                     wrongSound.Play();
                     orangeSound = true;
+                }
+                if (!isOrangeWrong)
+                {
+                    timer.timeRemaining -= 10;
+                    isOrangeWrong = true;
                 }
             }
 
@@ -289,6 +332,11 @@ public class ButtonControllerHard : MonoBehaviour
                     wrongSound.Play();
                     lightblueSound = true;
                 }
+                if (!isLightblueWrong)
+                {
+                    timer.timeRemaining -= 10;
+                    isLightblueWrong = true;
+                }
             }
             else if(lightBlueButton.lightBlueValue != resultButton && lightBlueButton.lightBlueValue == resultButton2)
             {
@@ -297,6 +345,11 @@ public class ButtonControllerHard : MonoBehaviour
                 {
                     wrongSound.Play();
                     lightblueSound = true;
+                }
+                if (!isLightblueWrong)
+                {
+                    timer.timeRemaining -= 10;
+                    isLightblueWrong = true;
                 }
             }
 
@@ -344,6 +397,11 @@ public class ButtonControllerHard : MonoBehaviour
                     wrongSound.Play();
                     whiteSound = true;
                 }
+                if (!isWhiteWrong)
+                {
+                    timer.timeRemaining -= 10;
+                    isWhiteWrong = true;
+                }
             }
             else if(whiteButton.whiteValue != resultButton && whiteButton.whiteValue == resultButton2)
             {
@@ -352,6 +410,11 @@ public class ButtonControllerHard : MonoBehaviour
                 {
                     wrongSound.Play();
                     whiteSound = true;
+                }
+                if (!isWhiteWrong)
+                {
+                    timer.timeRemaining -= 10;
+                    isWhiteWrong = true;
                 }
             }
 
@@ -397,6 +460,11 @@ public class ButtonControllerHard : MonoBehaviour
                     wrongSound.Play();
                     pinkSound = true;
                 }
+                if (!isPinkWrong)
+                {
+                    timer.timeRemaining -= 10;
+                    isPinkWrong = true;
+                }
             }
             else if(pinkButton.PinkValue != resultButton && pinkButton.PinkValue == resultButton2)
             {
@@ -406,6 +474,12 @@ public class ButtonControllerHard : MonoBehaviour
                     wrongSound.Play();
                     pinkSound = true;
                 }
+                if (!isPinkWrong)
+                {
+                    timer.timeRemaining -= 10;
+                    isPinkWrong = true;
+                }
+
             }
 
             if (pinkButton.PinkValue != resultButton && pinkButton.PinkValue != resultButton2)
@@ -450,6 +524,11 @@ public class ButtonControllerHard : MonoBehaviour
                     wrongSound.Play();
                     lightGreenSound = true;
                 }
+                if(!isLightgreenWrong)
+                {
+                    timer.timeRemaining -= 10;
+                    isLightgreenWrong = true;
+                }
             }
             else if(lightGreenButton.LightGreenValue != resultButton && lightGreenButton.LightGreenValue == resultButton2)
             {
@@ -458,6 +537,11 @@ public class ButtonControllerHard : MonoBehaviour
                 {
                     wrongSound.Play();
                     lightGreenSound = true;
+                }
+                if (!isLightgreenWrong)
+                {
+                    timer.timeRemaining -= 10;
+                    isLightgreenWrong = true;
                 }
             }
 
@@ -504,6 +588,11 @@ public class ButtonControllerHard : MonoBehaviour
                     wrongSound.Play();
                     purpleSound = true;
                 }
+                if(!isPurpleWrong)
+                {
+                    timer.timeRemaining -= 10;
+                    isPurpleWrong = true;
+                }
             }
             else if(purpleButton.PurpleValue != resultButton && purpleButton.PurpleValue == resultButton2)
             {
@@ -512,6 +601,11 @@ public class ButtonControllerHard : MonoBehaviour
                 {
                     wrongSound.Play();
                     purpleSound = true;
+                }
+                if (!isPurpleWrong)
+                {
+                    timer.timeRemaining -= 10;
+                    isPurpleWrong = true;
                 }
             }
 
@@ -557,6 +651,11 @@ public class ButtonControllerHard : MonoBehaviour
                     wrongSound.Play();
                     yellowSound = true;
                 }
+                if(!isYellowWrong)
+                {
+                    timer.timeRemaining -= 10;
+                    isYellowWrong = true;
+                }
             }
             else if(yellowButton.YellowValue != resultButton && yellowButton.YellowValue == resultButton2)
             {
@@ -565,6 +664,11 @@ public class ButtonControllerHard : MonoBehaviour
                 {
                     wrongSound.Play();
                     yellowSound = true;
+                }
+                if (!isYellowWrong)
+                {
+                    timer.timeRemaining -= 10;
+                    isYellowWrong = true;
                 }
             }
 
