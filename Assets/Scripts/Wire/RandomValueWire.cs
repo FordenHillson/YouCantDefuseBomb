@@ -21,6 +21,10 @@ public class RandomValueWire : MonoBehaviour
     public RandomSceneIngame randomSceneIngame;
 
     public TimerContoller timer;
+    public bool isYellowWrong = false;
+    public bool isBlueWrong = false;
+    public bool isRedWrong = false;
+    public bool isWhiteWrong = false;
 
     public AudioSource corretSound;
     public AudioSource wrongSound;
@@ -78,6 +82,11 @@ public class RandomValueWire : MonoBehaviour
             if(yellowWire.YellowValue != resultWire)
             {
                 Debug.Log("No");
+                if(!isYellowWrong)
+                {
+                    timer.timeRemaining-= 5;
+                    isYellowWrong = true;
+                }
                 if (!yellowSound)
                 {
                     wrongSound.Play();
@@ -104,6 +113,11 @@ public class RandomValueWire : MonoBehaviour
             if (blueWire.BlueValue != resultWire)
             {
                 Debug.Log("No");
+                if (!isBlueWrong)
+                {
+                    timer.timeRemaining -= 5;
+                    isBlueWrong = true;
+                }
                 if (!blueSound)
                 {
                     wrongSound.Play();
@@ -129,6 +143,11 @@ public class RandomValueWire : MonoBehaviour
             if(redWire.RedValue != resultWire)
             {
                 Debug.Log("No");
+                if (!isRedWrong)
+                {
+                    timer.timeRemaining -= 5;
+                    isRedWrong = true;
+                }
                 if (!redSound)
                 {
                     wrongSound.Play();
@@ -154,6 +173,11 @@ public class RandomValueWire : MonoBehaviour
             if (whiteWire.WhiteValue != resultWire)
             {
                 Debug.Log("No");
+                if (!isWhiteWrong)
+                {
+                    timer.timeRemaining -= 5;
+                    isWhiteWrong = true;
+                }
                 if (!whiteSound)
                 {
                     wrongSound.Play();

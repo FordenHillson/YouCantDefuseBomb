@@ -945,6 +945,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1264718911, guid: f74dac0e51a43d141ac6cdd5ec35c73e, type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1283275338, guid: f74dac0e51a43d141ac6cdd5ec35c73e, type: 3}
       propertyPath: wrongSound
       value: 

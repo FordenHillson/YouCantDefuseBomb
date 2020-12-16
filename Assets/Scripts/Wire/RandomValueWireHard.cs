@@ -4,14 +4,21 @@ using UnityEngine;
 
 public class RandomValueWireHard : MonoBehaviour
 {
-  public int resultWire;
+    public int resultWire;
     public int resultWire2;
 
 
     public YellowWire yellowWire;
     public BlueWire blueWire;
     public RedWire redWire;
-    public WhiteWire whiteWire;    
+    public WhiteWire whiteWire;
+
+    public TimerContoller timer;
+    public bool isYellowWrong = false;
+    public bool isBlueWrong = false;
+    public bool isRedWrong = false;
+    public bool isWhiteWrong = false;
+    
     
 
     public CountScene countScene;
@@ -24,6 +31,7 @@ public class RandomValueWireHard : MonoBehaviour
     public bool whiteSound;
 
 
+
     void Awake()
     {
         resultWire = Random.Range(1, 5);
@@ -33,6 +41,7 @@ public class RandomValueWireHard : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        timer = GameObject.Find("Timer").GetComponent<TimerContoller>();
         yellowWire = GameObject.Find("Yellow_Wire").GetComponent<YellowWire>();
         blueWire = GameObject.Find("Blue_Wire").GetComponent<BlueWire>();
         redWire = GameObject.Find("Red_Wire").GetComponent<RedWire>();
@@ -41,6 +50,7 @@ public class RandomValueWireHard : MonoBehaviour
         randomSceneIngameHard = GameObject.Find("RndScene").GetComponent<RandomSceneIngameHard>();
         corretSound = GameObject.Find("CorretSound").GetComponent<AudioSource>();
         wrongSound = GameObject.Find("WrongSound").GetComponent<AudioSource>();
+        
 
         yellowSound = false;
         blueSound = false;
@@ -106,7 +116,12 @@ public class RandomValueWireHard : MonoBehaviour
                    yellowSound = true;
                     
                 }
-           }
+                if (!isYellowWrong)
+                {
+                    timer.timeRemaining -= 10;
+                    isYellowWrong = true;
+                }
+            }
 
        }
 
@@ -159,7 +174,13 @@ public class RandomValueWireHard : MonoBehaviour
                    wrongSound.Play();
                    blueSound = true;                  
                }
-           }
+                if (!isBlueWrong)
+                {
+                    timer.timeRemaining -= 10;
+                    isBlueWrong = true;
+                }
+
+            }
        }  
        
        if(redWire.isRed)
@@ -210,6 +231,11 @@ public class RandomValueWireHard : MonoBehaviour
                     wrongSound.Play();
                     redSound = true;
                 }
+                if (!isRedWrong)
+                {
+                    timer.timeRemaining -= 10;
+                    isRedWrong = true;
+                }
             }
         }
 
@@ -239,28 +265,33 @@ public class RandomValueWireHard : MonoBehaviour
 
             if (whiteWire.WhiteValue == resultWire && whiteWire.WhiteValue != resultWire2)
             {
-                if (!redSound)
+                if (!whiteSound)
                 {
                     corretSound.Play();
-                    redSound = true;
+                    whiteSound = true;
                 }
             }
 
             else if (whiteWire.WhiteValue != resultWire && whiteWire.WhiteValue == resultWire2)
             {
-                if (!redSound)
+                if (!whiteSound)
                 {
                     corretSound.Play();
-                    redSound = true;
+                    whiteSound = true;
                 }
             }
 
             if (whiteWire.WhiteValue != resultWire && whiteWire.WhiteValue != resultWire2)
             {
-                if (!redSound)
+                if (!whiteSound)
                 {
                     wrongSound.Play();
-                    redSound = true;
+                    whiteSound = true;
+                }
+                if (!isWhiteWrong)
+                {
+                    timer.timeRemaining -= 10;
+                    isWhiteWrong = true;
                 }
             }
         }   

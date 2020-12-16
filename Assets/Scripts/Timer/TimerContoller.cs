@@ -29,7 +29,7 @@ public class TimerContoller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (countScene.valueCountScene == 1)
+        if (countScene.valueCountScene == 0)
         {
             timerIsRunning = true;
         }
