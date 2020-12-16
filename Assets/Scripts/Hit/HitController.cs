@@ -10,6 +10,7 @@ public class HitController : MonoBehaviour
     public AudioSource corretSound;
     public AudioSource wrongSound;
 
+
     // Start is called before the first frame update
     void Start()
     {   
@@ -41,6 +42,7 @@ public class HitController : MonoBehaviour
         {
             Debug.Log("wave 1 is incorret");
             wrongSound.Play();
+            timer.timeRemaining -= 10;
         }
 
     }
