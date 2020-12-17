@@ -10,15 +10,17 @@ public class TimerContoller : MonoBehaviour
     public bool timerIsRunning = false;
     public bool isBoom = false;
     public Text timeText;
-    public GameObject canvasTime;
+    public GameObject canvasTime;    
     public CountScene countScene;
+    
 
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
         canvasTime = GameObject.Find("Canvas2");
-        canvasTime.SetActive(false);
+        canvasTime.SetActive(false);        
         countScene = GameObject.Find("CountScene").GetComponent<CountScene>();
+       
     }
     // Start is called before the first frame update
     void Start()
@@ -29,6 +31,7 @@ public class TimerContoller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (countScene.valueCountScene == 0)
         {
             timerIsRunning = true;
@@ -38,30 +41,23 @@ public class TimerContoller : MonoBehaviour
         {            
             if (timeRemaining > 0)
             {
-               timeRemaining -= Time.deltaTime;
+               timeRemaining -= Time.deltaTime;               
             }
             else
             {
                Debug.Log("Time has run out!");
                timeRemaining = 0;
                timerIsRunning = false;
-               SceneManager.LoadScene(18);
-               canvasTime.SetActive(false);
-                Destroy(this.gameObject);
+               SceneManager.LoadScene(18);               
+               Destroy(this.gameObject);
             }                      
             canvasTime.SetActive(true);
             DisplayTime(timeRemaining);
         }
         if(!timerIsRunning)
         {
-            canvasTime.SetActive(false);
-        }
-
-        if(timerIsRunning)
-        {
-            
-        }
-        
+            timeText.text = "";
+        }        
     }
 
     void DisplayTime(float timeToDisplay)
