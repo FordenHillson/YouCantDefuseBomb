@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class TimerContoller : MonoBehaviour
 {
-    public float timeRemaining = 100;
+    public float timeRemaining = 120;
     public bool timerIsRunning = false;
     public bool isBoom = false;
     public Text timeText;
