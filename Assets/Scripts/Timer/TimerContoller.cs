@@ -10,17 +10,19 @@ public class TimerContoller : MonoBehaviour
     public bool timerIsRunning = false;
     public bool isBoom = false;
     public Text timeText;
+    public Text levelText;
     public GameObject canvasTime;    
-    public CountScene countScene;
+    public CountScene countScene;    
     
 
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
+
         canvasTime = GameObject.Find("Canvas2");
         canvasTime.SetActive(false);        
         countScene = GameObject.Find("CountScene").GetComponent<CountScene>();
-       
+        
     }
     // Start is called before the first frame update
     void Start()
@@ -51,12 +53,13 @@ public class TimerContoller : MonoBehaviour
                SceneManager.LoadScene(18);               
                Destroy(this.gameObject);
             }                      
-            canvasTime.SetActive(true);
+            canvasTime.SetActive(true);            
             DisplayTime(timeRemaining);
         }
         if(!timerIsRunning)
         {
             timeText.text = "";
+            levelText.text = "";
         }        
     }
 
@@ -67,6 +70,8 @@ public class TimerContoller : MonoBehaviour
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+
+        levelText.text = "Level : " + countScene.valueCountScene.ToString();
     }
 }
 

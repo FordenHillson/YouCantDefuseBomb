@@ -372,7 +372,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &504667961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1331,7 +1331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1791118259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1417,7 +1417,10 @@ MonoBehaviour:
   redWire: {fileID: 983303713}
   whiteWire: {fileID: 382707599}
   timer: {fileID: 0}
-  isWrong: 0
+  isYellowWrong: 0
+  isBlueWrong: 0
+  isRedWrong: 0
+  isWhiteWrong: 0
   countScene: {fileID: 0}
   randomSceneIngameHard: {fileID: 1651461614}
   corretSound: {fileID: 1647402057}
