@@ -11,9 +11,9 @@ public class toMenu : MonoBehaviour
     //public GameObject timer;
     public GameObject song_1;
     public GameObject song_2;
-    public GameObject soundTimer1;
+    /*public GameObject soundTimer1;
     public GameObject soundTimer2;
-    public GameObject soundTimer3;
+    public GameObject soundTimer3;*/
 
 
     void Start()
@@ -23,9 +23,9 @@ public class toMenu : MonoBehaviour
         //timer = GameObject.Find("Canvas2");
         song_1 = GameObject.Find("song1");
         song_2 = GameObject.Find("song2");
-        soundTimer1 = GameObject.Find("soundTimer1");
+        /*soundTimer1 = GameObject.Find("soundTimer1");
         soundTimer2 = GameObject.Find("soundTimer2");
-        soundTimer3 = GameObject.Find("soundTimer3");
+        soundTimer3 = GameObject.Find("soundTimer3");*/
     }
     public void MainMenu()
     {
@@ -35,9 +35,9 @@ public class toMenu : MonoBehaviour
         //Destroy(timer.gameObject);
         Destroy(song_1.gameObject);
         Destroy(song_2.gameObject);
-        Destroy(soundTimer1.gameObject);
+        /*Destroy(soundTimer1.gameObject);
         Destroy(soundTimer2.gameObject);
-        Destroy(soundTimer3.gameObject);
+        Destroy(soundTimer3.gameObject);*/
 
     }
 }
