@@ -52,6 +52,7 @@ public class TimerContoller : MonoBehaviour
                timerIsRunning = false;
                SceneManager.LoadScene(17);               
                Destroy(this.gameObject);
+               Destroy(canvasTime.gameObject);
             }                      
             canvasTime.SetActive(true);            
             DisplayTime(timeRemaining);
