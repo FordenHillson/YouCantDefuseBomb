@@ -40,13 +40,13 @@ public class PuseController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey("escape"))
+        if(Input.GetKeyDown("escape"))
         {
             if(!isTap)
             {                
                 isTap = true;
                 PauseOpen();
-            }else if (Input.GetKey("escape"))
+            }else if (Input.GetKeyDown("escape"))
             {
                 if(isTap)
                 {                    
