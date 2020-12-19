@@ -17,6 +17,9 @@ public class PuseController : MonoBehaviour
 
     public songsController songs;
     public song2Controller song2;
+
+    
+    public bool isTap = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +40,21 @@ public class PuseController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKey("escape"))
+        {
+            if(!isTap)
+            {                
+                isTap = true;
+                PauseOpen();
+            }else if (Input.GetKey("escape"))
+            {
+                if(isTap)
+                {                    
+                    isTap = false;
+                    PauseResume();
+                }
+            }
+        }
     }
 
     public void PauseOpen()
