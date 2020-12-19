@@ -53,7 +53,7 @@ public class waveAnsController : MonoBehaviour
     {
         if(waveAns == waveController.resultWave)
         {
-            SceneManager.LoadScene(15);
+            SceneManager.LoadScene(14);
             timer.timerIsRunning = false;
             timer.timeRemaining += 5;
             corretSound.Play();

@@ -7,6 +7,6 @@ public class toStartScene : MonoBehaviour
 {
    public void gotoStartScene()
    {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
    }
 }

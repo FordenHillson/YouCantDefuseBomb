@@ -33,7 +33,7 @@ public class RandomSceneIngame : MonoBehaviour
         
         if(isWire1)
         {
-            SceneManager.LoadScene(15);
+            SceneManager.LoadScene(14);
             timer.timerIsRunning = false;
             timer.timeRemaining += 5;
 
@@ -41,7 +41,7 @@ public class RandomSceneIngame : MonoBehaviour
 
         if(button.score >= 2)
         {
-            SceneManager.LoadScene(15);
+            SceneManager.LoadScene(14);
             timer.timerIsRunning = false;
             timer.timeRemaining += 5;
 

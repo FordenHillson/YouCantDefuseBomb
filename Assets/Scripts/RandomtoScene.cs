@@ -35,7 +35,7 @@ public class RandomtoScene : MonoBehaviour
     {
         if (nameController.nameField.text != "")
         {
-            SceneManager.LoadScene(15);
+            SceneManager.LoadScene(14);
             countScene.valueCountScene++;
         }
         else if (nameController.nameField.text == "")

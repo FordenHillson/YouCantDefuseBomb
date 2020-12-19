@@ -30,19 +30,20 @@ public class songsController : MonoBehaviour
             if(!song.isPlaying)
             {
                 song.Play();
+                song.volume = 0.5f;
             }
         }
 
         if(timer.timeRemaining <= 30)
         {
-            song.Stop();
+            song.Pause();
         }
 
         if(timer.timeRemaining >= 31)
         {
             if (!song.isPlaying)
             {
-                song.Play();
+                song.UnPause();
             }
         }
 

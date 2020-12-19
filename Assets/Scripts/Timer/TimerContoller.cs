@@ -50,7 +50,7 @@ public class TimerContoller : MonoBehaviour
                Debug.Log("Time has run out!");
                timeRemaining = 0;
                timerIsRunning = false;
-               SceneManager.LoadScene(18);               
+               SceneManager.LoadScene(17);               
                Destroy(this.gameObject);
             }                      
             canvasTime.SetActive(true);            

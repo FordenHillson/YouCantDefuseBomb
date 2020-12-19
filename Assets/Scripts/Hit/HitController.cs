@@ -33,7 +33,7 @@ public class HitController : MonoBehaviour
         if(line.isArea)
         {
             Debug.Log("pass");
-            SceneManager.LoadScene(15);
+            SceneManager.LoadScene(14);
             timer.timerIsRunning = false;
             timer.timeRemaining += 5;
             corretSound.Play();

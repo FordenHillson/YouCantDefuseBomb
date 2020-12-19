@@ -20,7 +20,7 @@ public class CountDown : MonoBehaviour
         time += incTimePerSecond * Time.deltaTime;
         if (time >= 1.1)
         {
-            SceneManager.LoadScene(16);
+            SceneManager.LoadScene(15);
         }
     }
 }

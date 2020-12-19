@@ -41,7 +41,7 @@ public class CheckScore : MonoBehaviour
         if(isWave1 == true && isWave2 == true)
         {
             Debug.Log("Pass !");
-            SceneManager.LoadScene(15);
+            SceneManager.LoadScene(14);
             timer.timeRemaining += 8;            
             timer.timerIsRunning = false;
         }

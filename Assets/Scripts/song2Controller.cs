@@ -28,12 +28,14 @@ public class song2Controller : MonoBehaviour
             if (!song.isPlaying)
             {
                 song.Play();
+                song.UnPause();
+                song.volume = 0.5f;
             }
         }
 
         if (timer.timeRemaining >= 31)
         {
-            song.Stop();
+            song.Pause();
         }
 
         if (timer.timeRemaining <= 0)
